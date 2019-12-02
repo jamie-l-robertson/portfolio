@@ -2,6 +2,9 @@ import styled from "styled-components"
 
 const HeaderWrapper = styled.header`
   display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
 `
 
 const NavList = styled.ul`
@@ -26,7 +29,7 @@ const BurgerBox = styled.span`
   display: block;
   width: 100%;
   height: 3px;
-  background-color: #000000;
+  background-color: ${props => props.theme.color.quaternary};
 
   &::before,
   &::after {
@@ -34,7 +37,7 @@ const BurgerBox = styled.span`
     content: "";
     width: 100%;
     height: 3px;
-    background-color: #000000;
+    background-color: ${props => props.theme.color.quaternary};
   }
 
   &::before {

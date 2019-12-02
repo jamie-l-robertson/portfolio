@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import theme from "./config"
 import fonts from "./fonts"
 import reset from "styled-reset-advanced"
 
@@ -7,9 +8,11 @@ const GlobalStyle = createGlobalStyle`
 ${reset};
 
 html {
+  color: ${theme.color.text};  
   font-family: ${fonts.body};
+  background-color: ${theme.color.secondary};
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; 
 }
 body {
   margin: 0;
@@ -224,6 +227,7 @@ h1 {
   color: inherit;
   font-weight: 700;
   text-rendering: optimizeLegibility;
+  letter-spacing: 1.3px;
 }
 h2 {
   margin-left: 0;
@@ -350,6 +354,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  font-size: 1.125rem;
 }
 figure {
   margin-left: 0;

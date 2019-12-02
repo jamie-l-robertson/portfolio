@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
+import CardList from "../components/cardList"
 
 // const articlesQuery = graphql`
 //   {
@@ -100,12 +101,22 @@ const IndexPage = ({ data }) => {
 
   const {
     datoCmsHomepage: { hero },
+    allDatoCmsProject,
   } = data
 
   return (
     <Layout>
       <SEO title="Home" />
       <Hero data={hero} />
+      <CardList heading="Recent work" cards={allDatoCmsProject.edges} />
+
+      {/* Articles */}
+
+      {/* Companies worked with */}
+
+      {/* social channels */}
+
+      {/* Get in touch */}
     </Layout>
   )
 }

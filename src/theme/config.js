@@ -1,7 +1,13 @@
+// https://coolors.co/c1c1c1-2c4251-d16666-b6c649-ffffff
+
 const theme = {
   color: {
-    primary: "#EEEEEE",
-    secondary: "#00EEEE",
+    primary: "#C1C1C1",
+    secondary: "#2C4251",
+    tertiary: "#D16666",
+    quaternary: "#B6C649",
+    quinary: "#FFFFFF",
+    text: "#FFFFFF",
   },
   layout: {
     inner: {

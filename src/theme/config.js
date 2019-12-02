@@ -14,6 +14,8 @@ const theme = {
     },
   },
   font: {
+    heading: "Solway, serif",
+    body: "Roboto, sans-serif",
     prefix: {
       sml: "20px",
     },

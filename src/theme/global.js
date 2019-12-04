@@ -1,7 +1,10 @@
 import { createGlobalStyle } from "styled-components"
+import breakpoint from "styled-components-breakpoint"
+import { rem } from "polished"
+import reset from "styled-reset-advanced"
+
 import theme from "./config"
 import fonts from "./fonts"
-import reset from "styled-reset-advanced"
 
 const GlobalStyle = createGlobalStyle`
 
@@ -225,9 +228,18 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   color: inherit;
+  font-size: ${rem("35px")};
   font-weight: 700;
   text-rendering: optimizeLegibility;
   letter-spacing: 1.3px;
+
+  ${breakpoint("tablet")`
+    font-size: ${rem("40px")};
+  `}
+
+    ${breakpoint("dekstop")`
+    font-size: ${rem("50px")};
+  `}
 }
 h2 {
   margin-left: 0;
@@ -238,8 +250,18 @@ h2 {
   padding-right: 0;
   padding-top: 0;
   color: inherit; 
+  font-size: ${rem("30px")};
   font-weight: 700;
   text-rendering: optimizeLegibility;
+
+  ${breakpoint("tablet")`
+    font-size: ${rem("35px")};
+  `}
+
+    ${breakpoint("dekstop")`
+    font-size: ${rem("40px")};
+  `}
+
 }
 h3 {
   margin-left: 0;
@@ -250,8 +272,17 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   color: inherit;
+  font-size: ${rem("25px")};
   font-weight: 700;
   text-rendering: optimizeLegibility;
+
+  ${breakpoint("tablet")`
+    font-size: ${rem("30px")};
+  `}
+
+    ${breakpoint("dekstop")`
+    font-size: ${rem("35px")};
+  `}
 }
 h4 {
   margin-left: 0;
@@ -355,6 +386,7 @@ p {
   padding-top: 0;
   margin-bottom: 1.45rem;
   font-size: 1.125rem;
+  line-height: 1.65;
 }
 figure {
   margin-left: 0;

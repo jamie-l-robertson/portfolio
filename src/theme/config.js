@@ -20,7 +20,7 @@ const theme = {
     },
   },
   font: {
-    heading: "Solway, serif",
+    label: "Solway, serif",
     body: "Roboto, sans-serif",
     prefix: {
       sml: "20px",
@@ -28,6 +28,11 @@ const theme = {
     heading: {
       sml: "34px",
     },
+  },
+  breakpoints: {
+    tablet: 768,
+    desktop: 1024,
+    largeDesktop: 1360,
   },
 }
 

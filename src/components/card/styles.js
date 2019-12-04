@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import { rem } from "polished"
+import Icon from "../icon"
 
 const CardWrapper = styled.article`
   padding: 25px;
@@ -9,4 +11,8 @@ const CardWrapper = styled.article`
     transform: translateY(-5px);
   }
 `
-export { CardWrapper }
+
+const StyledIcon = styled(Icon)`
+  margin-bottom: ${rem("20px")};
+`
+export { CardWrapper, StyledIcon }

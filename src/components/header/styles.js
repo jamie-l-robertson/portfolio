@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import breakpoint from "styled-components-breakpoint"
 
 const HeaderWrapper = styled.header`
   display: block;
@@ -17,12 +18,18 @@ const NavList = styled.ul`
 const NavItem = styled.li`
   display: inline-block;
   vertical-align: middle;
+  font-family: ${props => props.theme.font.label};
 `
 
 const Burger = styled.button`
   display: block;
   width: 30px;
   height: 30px;
+
+  ${breakpoint("tablet")`
+    display: none;
+    visibility: hidden;
+  `};
 `
 
 const BurgerBox = styled.span`

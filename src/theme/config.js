@@ -8,6 +8,10 @@ const theme = {
     quaternary: "#B6C649",
     quinary: "#FFFFFF",
     text: "#FFFFFF",
+    link: {
+      default: "#FFFFFF",
+      hover: "#B6C649",
+    },
   },
   layout: {
     inner: {

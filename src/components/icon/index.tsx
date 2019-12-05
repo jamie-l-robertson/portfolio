@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import {
   Github,
   ExternalLink,
@@ -18,6 +18,9 @@ import {
   Facebook,
   Twitter,
   XOctagon,
+  User,
+  Tag,
+  Home,
 } from "styled-icons/feather"
 
 const IconMap = {
@@ -39,16 +42,22 @@ const IconMap = {
   Facebook,
   Twitter,
   XOctagon,
+  User,
+  Tag,
+  Home,
 }
 
-const Icon = ({ name, size = 24, ...rest }) => {
+interface IconProps {
+  name: string
+  size?: number
+  rest?: any
+  title?: string
+}
+
+const Icon: React.FC<IconProps> = ({ name = "", size = 24, ...rest }) => {
   const Tag = IconMap[name]
 
   return <Tag size={size} {...rest} />
 }
 
 export default Icon
-
-Icon.defaultProps = {
-  name: Github,
-}

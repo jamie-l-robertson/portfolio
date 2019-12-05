@@ -61,11 +61,13 @@ template {
   display: none;
 }
 a {
+  color: ${theme.color.link.default};
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
 a:hover {
+  color: ${theme.color.link.hover};
   outline-width: 0;
 }
 abbr[title] {
@@ -272,16 +274,16 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   color: inherit;
-  font-size: ${rem("25px")};
+  font-size: ${rem("22px")};
   font-weight: 700;
   text-rendering: optimizeLegibility;
 
   ${breakpoint("tablet")`
-    font-size: ${rem("30px")};
+    font-size: ${rem("25px")};
   `}
 
     ${breakpoint("dekstop")`
-    font-size: ${rem("35px")};
+    font-size: ${rem("28px")};
   `}
 }
 h4 {
@@ -292,7 +294,7 @@ h4 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: ${rem("10px")};
   color: inherit;
   font-weight: 700;
   text-rendering: optimizeLegibility;

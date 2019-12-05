@@ -1,10 +1,23 @@
-import React from "react"
+import * as React from "react"
 import { Link } from "gatsby"
-import { arrayOf, shape, string } from "prop-types"
 import { HeroWrapper, Heading, Prefix } from "./styles"
 import { Inner } from "../../theme"
 
-const Hero = ({ data }) => {
+interface HeroProps {
+  data: [
+    {
+      prefix: string
+      title: string
+      copy: string
+      link: {
+        url: string
+        label: string
+      }
+    }
+  ]
+}
+
+const Hero: React.FC<HeroProps> = ({ data }) => {
   const { prefix, title, copy, link } = data[0]
 
   return (
@@ -24,28 +37,3 @@ const Hero = ({ data }) => {
 }
 
 export default Hero
-
-Hero.propTypes = {
-  data: arrayOf(
-    shape({
-      prefix: string,
-      title: string,
-      copy: string,
-      link: shape({
-        url: string,
-        label: string,
-      }),
-    })
-  ),
-}
-
-Hero.defaultProps = {
-  data: [
-    {
-      prefix: "",
-      title: "Title goes here...",
-      copy: "Copy goes here...",
-      link: {},
-    },
-  ],
-}

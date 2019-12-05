@@ -5,43 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import CardList from "../components/cardList"
-
-// const articlesQuery = graphql`
-//   {
-//     allDatoCmsArticle(sort: { order: ASC }) {
-//       edges {
-//         node {
-//           meta {
-//             status
-//             createdAt(fromNow: true)
-//           }
-//           id
-//           originalId
-//           seoMetaTags {
-//             id
-//           }
-//           locale
-//           contentArea {
-//             content
-//             intro
-//           }
-//           title
-//           featureImage {
-//             fixed(width: 360) {
-//               aspectRatio
-//               width
-//               height
-//               src
-//               srcSet
-//               sizes
-//             }
-//             alt
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+import Footer from "../components/footer"
 
 export const query = graphql`
   query IndexQuery {
@@ -73,6 +37,7 @@ export const query = graphql`
         node {
           id
           title
+          intro
           projectUrl
           repository
           projectDescription
@@ -89,6 +54,39 @@ export const query = graphql`
               content
               description
             }
+          }
+        }
+      }
+    }
+
+    allDatoCmsArticle {
+      edges {
+        node {
+          meta {
+            status
+            createdAt(fromNow: true)
+          }
+          id
+          originalId
+          seoMetaTags {
+            id
+          }
+          locale
+          contentArea {
+            content
+            intro
+          }
+          title
+          featureImage {
+            fixed(width: 360) {
+              aspectRatio
+              width
+              height
+              src
+              srcSet
+              sizes
+            }
+            alt
           }
         }
       }

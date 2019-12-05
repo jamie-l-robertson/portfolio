@@ -1,11 +1,15 @@
 import styled, { css } from "styled-components"
 
-const StyledHeading = styled.h1`
+interface StyledHeadingProps {
+  readonly hasBorder: boolean
+}
+
+const StyledHeading = styled.h1<StyledHeadingProps>`
   position: relative;
   margin-bottom: 40px;
 
   ${props =>
-    props.hasBorder == true &&
+    props.hasBorder === true &&
     css`
       &::after {
         display: block;

@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { Container } from "../../theme"
 
 const HeroWrapper = styled(Container)`
+  position: relative;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -10,10 +11,8 @@ const HeroWrapper = styled(Container)`
 `
 
 const Heading = styled.h1`
-    display: block;
-    font-size: 60px;
-    /* font-size: ${props => props.theme.font.heading.sml}; */
-
+  display: block;
+  font-size: 60px;
 `
 
 const Prefix = styled.span`
@@ -24,4 +23,8 @@ const Prefix = styled.span`
   letter-spacing: initial;
 `
 
-export { HeroWrapper, Heading, Prefix }
+const Brand = styled.span`
+  display: block;
+`
+
+export { HeroWrapper, Heading, Prefix, Brand }

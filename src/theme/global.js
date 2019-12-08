@@ -239,7 +239,7 @@ h1 {
     font-size: ${rem("40px")};
   `}
 
-    ${breakpoint("dekstop")`
+    ${breakpoint("desktop")`
     font-size: ${rem("50px")};
   `}
 }
@@ -260,7 +260,7 @@ h2 {
     font-size: ${rem("35px")};
   `}
 
-    ${breakpoint("dekstop")`
+    ${breakpoint("desktop")`
     font-size: ${rem("40px")};
   `}
 
@@ -282,7 +282,7 @@ h3 {
     font-size: ${rem("25px")};
   `}
 
-    ${breakpoint("dekstop")`
+    ${breakpoint("desktop")`
     font-size: ${rem("28px")};
   `}
 }

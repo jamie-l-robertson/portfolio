@@ -1,14 +1,21 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { HeroWrapper, Heading, Prefix } from "./styles"
+import Socialbar from "../socialbar"
+import { HeroWrapper, Heading, Prefix, Brand } from "./styles"
 import { Inner } from "../../theme"
 
 interface HeroProps {
+  showBrand?: boolean
   data: [
     {
       prefix: string
       title: string
-      copy: string
+      intro: string
+      copyNode: {
+        childMarkdownRemark: {
+          html: string
+        }
+      }
       link: {
         url: string
         label: string
@@ -17,20 +24,29 @@ interface HeroProps {
   ]
 }
 
-const Hero: React.FC<HeroProps> = ({ data }) => {
-  const { prefix, title, copy, link } = data[0]
+const Hero: React.FC<HeroProps> = ({ showBrand = true, data }) => {
+  const { prefix, title, intro, copyNode, link } = data[0]
 
   return (
     <HeroWrapper>
       <Inner>
+        {showBrand && <Brand />}
         {title && (
           <Heading>
             <Prefix>{prefix}</Prefix>
             {title}
           </Heading>
         )}
-        {copy && <p>{copy}</p>}
+        {intro && <p>{intro}</p>}
+        {copyNode && (
+          <div
+            dangerouslySetInnerHTML={{
+              __html: copyNode.childMarkdownRemark.html,
+            }}
+          />
+        )}
         {link && <Link to={link.url}>{link.label}</Link>}
+        <Socialbar />
       </Inner>
     </HeroWrapper>
   )

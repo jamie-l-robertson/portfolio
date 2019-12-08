@@ -5,7 +5,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import CardList from "../components/cardList"
-import Footer from "../components/footer"
+import Brandbar from "../components/brandbar"
+import Socialbar from "../components/socialbar"
+import Contact from "../components/contact"
 
 export const query = graphql`
   query IndexQuery {
@@ -25,7 +27,11 @@ export const query = graphql`
         prefix
         title
         intro
-        copy
+        copyNode {
+          childMarkdownRemark {
+            html
+          }
+        }
         link
       }
     }
@@ -95,8 +101,6 @@ export const query = graphql`
 `
 
 const IndexPage = ({ data }) => {
-  console.log(data)
-
   const {
     datoCmsHomepage: { hero },
     allDatoCmsProject,
@@ -104,17 +108,11 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Jamie Robertson - Home" />
       <Hero data={hero} />
-      <CardList heading="Recent work" cards={allDatoCmsProject.edges} />
+      {/* <CardList heading="Recent work" cards={allDatoCmsProject.edges} /> */}
 
-      {/* Articles */}
-
-      {/* Companies worked with */}
-
-      {/* social channels */}
-
-      {/* Get in touch */}
+      <Contact />
     </Layout>
   )
 }

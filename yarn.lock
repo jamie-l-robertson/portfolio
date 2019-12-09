@@ -4972,6 +4972,13 @@ gatsby-page-utils@^0.0.32:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-google-analytics@^2.1.29:
+  version "2.1.29"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.1.29.tgz#d24caabf2a89abd95f1620434ff784088bac38f2"
+  integrity sha512-vRMmXyam7LUwD+xdWCLQTbe5pT8FOX3vcIJdwckY/c3x3/GFIkx9bRJ1/N8z9x9dAci3g0HoTQZ6BkcqcNhzkA==
+  dependencies:
+    "@babel/runtime" "^7.7.4"
+
 gatsby-plugin-google-fonts@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-fonts/-/gatsby-plugin-google-fonts-1.0.1.tgz#d71054f7bf207b9a8da227380369e18e6f4e0201"

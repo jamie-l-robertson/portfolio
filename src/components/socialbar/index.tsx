@@ -16,7 +16,7 @@ const Socialbar: React.FC<SocialbarProps> = ({ vertical = false }) => {
     <Items>
       {channels.map((item, i) => (
         <Item key={`socialbar-item-${i}`}>
-          <a href={item.url} title={item.message} target="_blank">
+          <a href={item.url} title={item.message} rel="noopener noreferrer" target="_blank">
             <Icon name={item.icon} />
           </a>
         </Item>

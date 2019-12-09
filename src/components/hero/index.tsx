@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({ showBrand = true, data }) => {
   const { prefix, title, intro, copyNode, link } = data[0];
 
   const [ref, inView] = useInView({
-    rootMargin: '-100px 0px',
+    rootMargin: '0px 0px',
   });
 
   const props = useSpring({

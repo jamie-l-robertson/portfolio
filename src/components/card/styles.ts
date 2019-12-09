@@ -19,7 +19,7 @@ const CardMeta = styled.header`
   text-align: right;
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   display: inline-block;
   margin: 0 ${rem("5px")};
 

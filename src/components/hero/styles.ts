@@ -1,9 +1,10 @@
 import styled from "styled-components"
 import breakpoint from 'styled-components-breakpoint'
 import { rem } from 'polished'
+import { animated } from "react-spring"
 import { Container } from "../../theme"
 
-const HeroWrapper = styled(Container)`
+const HeroWrapper = styled(animated(Container))`
   position: relative;
   display: flex;
   min-height: 100vh;

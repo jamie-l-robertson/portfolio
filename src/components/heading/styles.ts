@@ -1,4 +1,6 @@
 import styled, { css } from "styled-components"
+import breakpoint from "styled-components-breakpoint"
+import { rem } from "polished"
 
 interface StyledHeadingProps {
   readonly hasBorder: boolean
@@ -20,6 +22,15 @@ const StyledHeading = styled.h1<StyledHeadingProps>`
         background-color: ${props.theme.color.quaternary};
       }
     `}
+
+    > span {
+      font-size: ${rem('40px')};
+      color: ${props => props.theme.color.quaternary}
+
+      ${breakpoint('tablet')`
+        font-size: ${rem('60px')};
+      `};
+    }
 `
 
 export default StyledHeading

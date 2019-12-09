@@ -15,7 +15,7 @@ const HeaderWrapper = styled.header`
     rgba(44, 66, 81, 0) 100%
   );
   width: 100%;
-  padding: ${rem("25px")} 0;
+  padding: ${rem("25px")} 0 ${rem("50px")};
 
   ${breakpoint("tablet")`
     padding: ${rem("40px")} 0;

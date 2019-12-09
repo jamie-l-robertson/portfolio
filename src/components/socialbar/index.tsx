@@ -10,8 +10,6 @@ interface SocialbarProps {
 const Socialbar: React.FC<SocialbarProps> = ({ vertical = false }) => {
   const channels = config.socialLinks
 
-  console.log(config.socialLinks)
-
   return (
     <Items>
       {channels.map((item, i) => (

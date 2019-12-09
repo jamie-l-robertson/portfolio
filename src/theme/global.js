@@ -43,6 +43,11 @@ section,
 summary {
   display: block;
 }
+
+main {
+  position: relative;
+}
+
 audio,
 canvas,
 progress,

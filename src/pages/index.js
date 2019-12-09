@@ -1,9 +1,11 @@
-import React from "react"
+import * as React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
+import CardList from "../components/cardList"
+import BackgroundParticles from "../components/particles"
 
 export const query = graphql`
   query IndexQuery {
@@ -105,8 +107,9 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
+      <BackgroundParticles />
       <Hero data={hero} />
-      {/* <CardList heading="Recent work" cards={allDatoCmsProject.edges} /> */}
+      <CardList heading="Personal projects" cards={allDatoCmsProject.edges} />
 
       {/* <Contact /> */}
     </Layout>

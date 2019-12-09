@@ -1,4 +1,4 @@
-import * as React from "React"
+import * as React from "react"
 import Card from "../card"
 import Heading from "../heading"
 import { Container, Inner } from "../../theme"
@@ -11,7 +11,7 @@ interface CardListProps {
 
 const CardList: React.FC<CardListProps> = ({ heading, cards = [] }) => {
   return (
-    <Container>
+    <Container style={{ paddingTop: 0 }}>
       <Inner>
         {heading && (
           <Heading level="2" border={true}>

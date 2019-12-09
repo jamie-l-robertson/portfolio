@@ -21,6 +21,7 @@ import {
   User,
   Tag,
   Home,
+  Codepen,
 } from "styled-icons/feather"
 
 const IconMap = {
@@ -45,6 +46,7 @@ const IconMap = {
   User,
   Tag,
   Home,
+  Codepen,
 }
 
 interface IconProps {

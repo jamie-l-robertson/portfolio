@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Socialbar from "../socialbar"
-import { HeroWrapper, Heading, Prefix, Brand } from "./styles"
+import { HeroWrapper, Heading, Prefix, Brand, Dot } from "./styles"
 import { Inner } from "../../theme"
 
 interface HeroProps {
@@ -34,7 +34,7 @@ const Hero: React.FC<HeroProps> = ({ showBrand = true, data }) => {
         {title && (
           <Heading>
             <Prefix>{prefix}</Prefix>
-            {title}
+            {title}<Dot>.</Dot>
           </Heading>
         )}
         {intro && <p>{intro}</p>}

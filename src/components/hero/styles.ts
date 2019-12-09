@@ -11,6 +11,14 @@ const HeroWrapper = styled(Container)`
   align-items: flex-start;
   justify-content: center;
 
+  ${breakpoint('tablet')`
+    padding-top: calc(60px + 118px);
+  `};
+
+${breakpoint('desktop')`
+    padding-top: calc(120px + 118px); 
+  `};
+
   p > a {
     border-bottom: 1px dotted currentColor
   }
@@ -18,6 +26,7 @@ const HeroWrapper = styled(Container)`
 
 const Heading = styled.h1`
   display: block;
+  position: relative;
   font-size: ${rem('50px')};
 
   ${breakpoint('tablet')`
@@ -37,4 +46,9 @@ const Brand = styled.span`
   display: block;
 `
 
-export { HeroWrapper, Heading, Prefix, Brand }
+const Dot = styled.span`
+  color: ${props => props.theme.color.quaternary}
+`;
+
+
+export { HeroWrapper, Heading, Prefix, Brand, Dot }

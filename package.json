@@ -2,7 +2,7 @@
   "name": "jamie-robertson-portfolio",
   "private": true,
   "description": "",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "jrobertson_uk@msn.com",
   "dependencies": {
     "@types/styled-components": "^4.4.0",
@@ -28,6 +28,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-particles-js": "^2.7.0",
     "styled-components": "^4.4.1",
     "styled-components-breakpoint": "^3.0.0-preview.20",
     "styled-icons": "^9.0.1",

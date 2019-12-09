@@ -30,6 +30,11 @@ const config = {
       message: "View my Linkedin profile",
     },
     {
+      url: "https://codepen.io/ru7hl355",
+      icon: "Codepen",
+      message: "View my Codepen",
+    },
+    {
       url: "mailto:jrobertson_uk@msn.com",
       icon: "Mail",
       message: "Get in touch",

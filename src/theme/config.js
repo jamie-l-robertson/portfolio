@@ -8,6 +8,7 @@ const theme = {
     quaternary: "#B6C649",
     quinary: "#FFFFFF",
     text: "#FFFFFF",
+    footer: "#273646",
     link: {
       default: "#FFFFFF",
       hover: "#B6C649",
@@ -18,8 +19,8 @@ const theme = {
       maxWidth: "1024px",
       padding: {
         sml: "30px",
-        md: "50px",
-        lrg: "70px",
+        md: "60px",
+        lrg: "120px",
       },
     },
   },

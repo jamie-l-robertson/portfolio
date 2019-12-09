@@ -10,7 +10,9 @@ const HeaderWrapper = styled.header`
 
   ${breakpoint('tablet')`
     position: fixed;
+    z-index: 10;
     top: 0;
+    background: linear-gradient(to bottom, rgba(44,66,81,1) 0%,rgba(44,66,81,1) 40%,rgba(125,185,232,0) 100%);
   `};
 `
 

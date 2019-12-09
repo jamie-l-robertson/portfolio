@@ -16,7 +16,7 @@ const StyledHeading = styled.h1<StyledHeadingProps>`
         content: "";
         height: 3px;
         width: 80px;
-        margin-top: 15px;
+        margin-top: 35px;
         background-color: ${props.theme.color.quaternary};
       }
     `}

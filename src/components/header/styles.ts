@@ -1,18 +1,18 @@
 import styled from "styled-components"
 import breakpoint from "styled-components-breakpoint"
 import { Link } from "gatsby"
-import { rem } from 'polished';
+import { rem } from "polished"
 
 const HeaderWrapper = styled.header`
   display: block;
   width: 100%;
-  padding: ${rem('40px')} 0;
+  padding: ${rem("40px")} 0;
 
-  ${breakpoint('tablet')`
+  ${breakpoint("tablet")`
     position: fixed;
     z-index: 10;
     top: 0;
-    background: linear-gradient(to bottom, rgba(44,66,81,1) 0%,rgba(44,66,81,1) 40%,rgba(125,185,232,0) 100%);
+    background: linear-gradient(to bottom, rgba(44,66,81,1) 0%,rgba(44,66,81,1) 40%,rgba(44,66,81,0) 100%);
   `};
 `
 
@@ -27,7 +27,7 @@ const LogoWrapper = styled(Link)`
     height: 100%;
     width: auto;
   }
-`;
+`
 
 const NavList = styled.ul`
   display: none;

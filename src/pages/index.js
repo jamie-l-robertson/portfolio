@@ -4,10 +4,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
-import CardList from "../components/cardList"
-import Brandbar from "../components/brandbar"
-import Socialbar from "../components/socialbar"
-import Contact from "../components/contact"
 
 export const query = graphql`
   query IndexQuery {

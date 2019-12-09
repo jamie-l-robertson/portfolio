@@ -17,6 +17,8 @@ const CardWrapper = styled.article`
 
 const CardMeta = styled.header`
   float: right;
+  position: relative;
+  z-index: 2;
   text-align: right;
 `
 

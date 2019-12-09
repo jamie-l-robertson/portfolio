@@ -112,7 +112,7 @@ const IndexPage = ({ data }) => {
       <Hero data={hero} />
       {/* <CardList heading="Recent work" cards={allDatoCmsProject.edges} /> */}
 
-      <Contact />
+      {/* <Contact /> */}
     </Layout>
   )
 }

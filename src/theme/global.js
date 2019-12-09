@@ -387,8 +387,12 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  font-size: 1.125rem;
+  font-size: ${rem('16px')};
   line-height: 1.65;
+
+  ${breakpoint('tablet')`
+    font-size: ${rem('18px')};
+  `};
 }
 figure {
   margin-left: 0;

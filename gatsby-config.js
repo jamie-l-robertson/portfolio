@@ -3,6 +3,7 @@ module.exports = {
     title: `Jamie Robertson`,
     description: `Frontend developer based in Edinburgh, Scotland. Currently focusing on React based projects.`,
     author: `@jamie-l-robertson`,
+    siteUrl: `https://www.jamie-robertson.uk`,
   },
   plugins: [
     {
@@ -14,6 +15,15 @@ module.exports = {
         exclude: ["/preview/**"],
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.jamie-robertson.uk',
+        sitemap: 'https://www.jamie-robertson.uk/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     {

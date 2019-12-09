@@ -25,12 +25,12 @@ const Card: React.FC<CardProps> = props => {
     <CardWrapper>
       <CardMeta>
         {repository && (
-          <StyledLink href={repository} rel="noopener noreferrer" target="_blank">
+          <StyledLink href={repository} rel="noopener noreferrer" target="_blank" aria-label="View project code">
             <Icon name="Github" title={`View repository of ${title}`} />
           </StyledLink>
         )}
         {projectUrl && (
-          <StyledLink href={projectUrl} rel="noopener noreferrer" target="_blank">
+          <StyledLink href={projectUrl} rel="noopener noreferrer" target="_blank" aria-label="View project">
             <Icon name="ExternalLink" title={`Visit ${projectUrl}`} />
           </StyledLink>
         )}

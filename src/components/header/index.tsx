@@ -13,7 +13,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
   <HeaderWrapper>
     <Inner>
-      <LogoWrapper to="/">
+      <LogoWrapper to="/" aria-label="Jamie Robertson, Back to homepage">
         <Logo />
       </LogoWrapper>
       <Burger>

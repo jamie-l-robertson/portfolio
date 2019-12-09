@@ -2,7 +2,7 @@
   "name": "jamie-robertson-portfolio",
   "private": true,
   "description": "",
-  "version": "0.2.3",
+  "version": "0.2.7",
   "author": "jrobertson_uk@msn.com",
   "dependencies": {
     "@types/styled-components": "^4.4.0",

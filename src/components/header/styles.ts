@@ -5,14 +5,20 @@ import { rem } from "polished"
 
 const HeaderWrapper = styled.header`
   display: block;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(44, 66, 81, 1) 0%,
+    rgba(44, 66, 81, 1) 40%,
+    rgba(44, 66, 81, 0) 100%
+  );
   width: 100%;
-  padding: ${rem("40px")} 0;
+  padding: ${rem("25px")} 0;
 
   ${breakpoint("tablet")`
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    background: linear-gradient(to bottom, rgba(44,66,81,1) 0%,rgba(44,66,81,1) 40%,rgba(44,66,81,0) 100%);
+    padding: ${rem("40px")} 0;
   `};
 `
 

@@ -1,6 +1,6 @@
 # Jamie Robertson - Portfolio
 
-My person website, built with:
+My personal website, built with:
 
 - React
 - Gatsby

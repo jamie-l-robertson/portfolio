@@ -103,7 +103,7 @@ module.exports = {
         pageTransitionDelay: 0,
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "jamir-robertson.uk",
+        cookieDomain: "jamie-robertson.uk",
       },
     },
   ],

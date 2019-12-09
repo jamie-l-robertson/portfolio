@@ -10,6 +10,7 @@ const HeroWrapper = styled(Container)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  padding-top: ${rem('200px')};
 
   ${breakpoint('tablet')`
     padding-top: calc(60px + 118px);
@@ -20,14 +21,14 @@ ${breakpoint('desktop')`
   `};
 
   p > a {
-    border-bottom: 1px dotted currentColor
+    border-bottom: 1px dotted currentColor;
   }
 `
 
 const Heading = styled.h1`
   display: block;
   position: relative;
-  font-size: ${rem('50px')};
+  font-size: ${rem('40px')};
 
   ${breakpoint('tablet')`
     font-size: ${rem('60px')};

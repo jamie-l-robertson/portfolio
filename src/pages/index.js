@@ -104,7 +104,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Jamie Robertson - Home" />
+      <SEO title="Home" />
       <Hero data={hero} />
       {/* <CardList heading="Recent work" cards={allDatoCmsProject.edges} /> */}
 

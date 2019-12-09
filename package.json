@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "jamie-robertson-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "jrobertson_uk@msn.com",
   "dependencies": {
     "@types/styled-components": "^4.4.0",
     "babel-plugin-styled-components": "^1.10.6",
@@ -36,18 +36,8 @@
     "prettier": "^1.19.1",
     "typescript": "^3.7.3"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "type-check": "tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

@@ -12,7 +12,6 @@ interface CardListProps {
 }
 
 const CardList: React.FC<CardListProps> = ({ heading, cards = [] }) => {
-
   const [ref, inView] = useInView({
     rootMargin: '-100px 0px',
   });

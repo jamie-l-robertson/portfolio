@@ -1,13 +1,15 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import { ThemeProvider } from "styled-components"
-import { theme, GlobalStyle } from "../theme"
+import React, { useEffect } from "react";
+import { Globals } from 'react-spring';
+import { useReduceMotion } from 'react-reduce-motion';
+import { useStaticQuery, graphql } from "gatsby";
+import { ThemeProvider } from "styled-components";
+import { theme, GlobalStyle } from "../theme";
 
 import Header from "./header"
 import Footer from "./footer"
 
 const Layout = ({ children }) => {
+  const prefersReducedMotion = useReduceMotion();
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -18,6 +20,12 @@ const Layout = ({ children }) => {
     }
   `)
 
+  useEffect(() => {
+    Globals.assign({
+      skipAnimation: prefersReducedMotion,
+    })
+  }, [prefersReducedMotion]);
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -25,11 +33,7 @@ const Layout = ({ children }) => {
       <main>{children}</main>
       <Footer />
     </ThemeProvider>
-  )
+  );
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout
+export default Layout;

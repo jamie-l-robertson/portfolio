@@ -6,7 +6,7 @@ import Heading from "../heading"
 
 const CardWrapper = styled.article`
   margin-bottom: ${rem('25px')};
-  padding: ${rem('30px')} ${rem('25px')} ${rem('40px')};
+  padding: ${rem('40px')} ${rem('25px')};
   background-color: rgba(255, 255, 255, 0.08);
   transition: all 0.2s ease-in-out;
 
@@ -16,6 +16,9 @@ const CardWrapper = styled.article`
 `
 
 const CardMeta = styled.header`
+  float: right;
+  position: relative;
+  z-index: 2;
   text-align: right;
 `
 
@@ -30,6 +33,7 @@ const StyledLink = styled.a`
 
 const StyledHeading = styled(Heading)`
   margin-bottom: ${rem("20px")};
+  padding-right: ${rem('90px')};
 `
 
 const TechItem = styled.span`

@@ -10,6 +10,7 @@ import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const prefersReducedMotion = useReduceMotion();
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

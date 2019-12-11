@@ -42,6 +42,7 @@ const config = {
   ],
   contact: {
     email: "jrobertson_uk@msn.com",
+    intro: "<p>Although I'm not currently looking for any new freelance opportunities, my email is always open. If you would like to discuss a potential project or just say hello!</p>"
   },
 }
 

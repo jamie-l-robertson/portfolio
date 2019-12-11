@@ -16,15 +16,7 @@ export const useReduceMotion = () => {
     };
 
     handleChange();
-
-    //mq.addEventListener('change', function); is not supported in Safari yet...
-    if (typeof mq === 'function') {
-      mq.addEventListener('change', handleChange);
-      return () => {
-        mq.removeEventListener('change', handleChange);
-      }
-    };
-
+    mq.addListener(handleChange);
   }, []);
 
   return matches;

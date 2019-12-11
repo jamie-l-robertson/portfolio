@@ -17,6 +17,10 @@ export const useReduceMotion = () => {
 
     handleChange();
     mq.addListener(handleChange);
+
+    return () => {
+      mq.removeListener(handleChange);
+    }
   }, []);
 
   return matches;

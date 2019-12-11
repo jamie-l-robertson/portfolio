@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Globals } from 'react-spring';
-import { useReduceMotion } from 'react-reduce-motion';
+import { useReduceMotion } from '../../helpers/useReduceMotion';
 import { StyledParticles } from './styles';
 
 const BackgroundParticles = () => {

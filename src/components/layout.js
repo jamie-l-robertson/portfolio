@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Globals } from 'react-spring';
-import { useReduceMotion } from 'react-reduce-motion';
+import { useReduceMotion } from '../helpers/useReduceMotion';
 import { useStaticQuery, graphql } from "gatsby";
 import { ThemeProvider } from "styled-components";
 import { theme, GlobalStyle } from "../theme";

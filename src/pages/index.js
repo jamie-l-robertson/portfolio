@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import CardList from "../components/cardList"
 import BackgroundParticles from "../components/particles"
+import ContactPanel from "../components/contactPanel";
 
 export const query = graphql`
   query IndexQuery {
@@ -111,7 +112,7 @@ const IndexPage = ({ data }) => {
       <Hero data={hero} />
       <CardList heading="Personal projects" cards={allDatoCmsProject.edges} />
 
-      {/* <Contact /> */}
+      <ContactPanel title="Get in touch" />
     </Layout>
   )
 }

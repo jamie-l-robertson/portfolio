@@ -20,7 +20,7 @@ const theme = {
       padding: {
         sml: "30px",
         md: "60px",
-        lrg: "120px",
+        lrg: "150px",
       },
     },
   },

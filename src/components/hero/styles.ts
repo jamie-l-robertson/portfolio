@@ -49,8 +49,14 @@ const Brand = styled.span`
 `
 
 const Dot = styled.span`
-  color: ${props => props.theme.color.quaternary}
+  color: ${props => props.theme.color.quaternary};
+`;
+
+const Intro = styled.div`
+  p {
+    font-size: ${rem('20px')};
+  }
 `;
 
 
-export { HeroWrapper, Heading, Prefix, Brand, Dot }
+export { HeroWrapper, Heading, Prefix, Brand, Intro, Dot }

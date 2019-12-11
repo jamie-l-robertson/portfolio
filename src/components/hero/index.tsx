@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { useSpring } from "react-spring"
 import { useInView } from 'react-intersection-observer'
 import Socialbar from "../socialbar"
-import { HeroWrapper, Heading, Prefix, Brand, Dot } from "./styles"
+import { HeroWrapper, Heading, Prefix, Intro, Brand, Dot } from "./styles"
 import { Inner } from "../../theme";
 
 interface HeroProps {
@@ -48,9 +48,8 @@ const Hero: React.FC<HeroProps> = ({ showBrand = true, data }) => {
             {title}<Dot aria-hidden="true">.</Dot>
           </Heading>
         )}
-        {intro && <p>{intro}</p>}
         {copyNode && (
-          <div
+          <Intro
             dangerouslySetInnerHTML={{
               __html: copyNode.childMarkdownRemark.html,
             }}

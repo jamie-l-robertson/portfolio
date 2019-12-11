@@ -53,6 +53,8 @@ const Dot = styled.span`
 `;
 
 const Intro = styled.div`
+  max-width: 760px;
+
   p {
     font-size: ${rem('20px')};
   }

@@ -7,14 +7,14 @@ const Content = styled.div`
   max-width: 760px;
 
   ul, ol {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 120px));
+    overflow: hidden;
+    row-gap: 8px;
+    column-gap: 30px;
 
     ${breakpoint('tablet')`
-      display: grid;
       grid-template-columns: repeat(3, minmax(160px, 200px));
-      overflow: hidden;
-      row-gap: 8px;
-      column-gap: 30px;
     `};
 
     li {

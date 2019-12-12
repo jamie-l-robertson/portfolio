@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 import CardList from "../components/cardList"
 import BackgroundParticles from "../components/particles"
+import ContentPanel from "../components/contentPanel";
 import ContactPanel from "../components/contactPanel";
 
 export const query = graphql`
@@ -32,6 +33,14 @@ export const query = graphql`
           }
         }
         link
+      }
+      about {
+        contentNode {
+          childMarkdownRemark {
+            html
+          }
+        }
+        title
       }
     }
     datoCmsGlobalSetting {
@@ -100,8 +109,10 @@ export const query = graphql`
 `
 
 const IndexPage = ({ data }) => {
+
+  console.log(data);
   const {
-    datoCmsHomepage: { hero },
+    datoCmsHomepage: { hero, about },
     allDatoCmsProject,
   } = data
 
@@ -110,6 +121,7 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
       <BackgroundParticles />
       <Hero data={hero} />
+      <ContentPanel content={about} />
       <CardList heading="Personal projects" cards={allDatoCmsProject.edges} />
 
       <ContactPanel title="Get in touch" />

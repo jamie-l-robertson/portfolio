@@ -22,7 +22,7 @@ const CardList: React.FC<CardListProps> = ({ heading, cards = [] }) => {
   });
 
   return (
-    <Container style={{ paddingTop: 0 }}>
+    <Container>
       <Inner>
         <animated.div ref={ref} style={props}>
           {heading && (

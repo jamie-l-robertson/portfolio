@@ -1,6 +1,5 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
@@ -109,22 +108,20 @@ export const query = graphql`
 `
 
 const IndexPage = ({ data }) => {
-
-  console.log(data);
   const {
     datoCmsHomepage: { hero, about },
     allDatoCmsProject,
   } = data
 
+
   return (
     <Layout>
       <SEO title="Home" />
       <BackgroundParticles />
-      <Hero data={hero} />
-      <ContentPanel content={about} />
-      <CardList heading="Personal projects" cards={allDatoCmsProject.edges} />
-
-      <ContactPanel title="Get in touch" />
+      <Hero id="home" data={hero} />
+      <ContentPanel id="about" content={about} />
+      <CardList id="projects" heading="Personal projects" cards={allDatoCmsProject.edges} />
+      <ContactPanel id="contact" title="Get in touch" />
     </Layout>
   )
 }

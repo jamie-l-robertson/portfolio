@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { useSpring } from "react-spring"
 import { useInView } from 'react-intersection-observer'
+import { urlContext } from '../../store/url.context';
 import Socialbar from "../socialbar"
 import TransitionWrapper from '../transitionWrapper';
 import { HeroWrapper, Heading, Prefix, Intro, Brand, Dot } from "./styles"
@@ -9,6 +10,7 @@ import { Inner } from "../../theme";
 
 interface HeroProps {
   showBrand?: boolean
+  id?: string
   data: [
     {
       prefix: string
@@ -27,7 +29,7 @@ interface HeroProps {
   ]
 }
 
-const Hero: React.FC<HeroProps> = ({ showBrand = true, data }) => {
+const Hero: React.FC<HeroProps> = ({ showBrand = true, data, id = undefined }) => {
   const { prefix, title, intro, copyNode, link } = data[0];
 
   const [ref, inView] = useInView({
@@ -39,8 +41,17 @@ const Hero: React.FC<HeroProps> = ({ showBrand = true, data }) => {
     transform: inView ? `translate3d(0, 0, 0)` : `translate3d(0, 20px, 0)`
   });
 
+  const { setCurrentUrl } = React.useContext(urlContext);
+
+  React.useMemo(() => {
+    if (inView) {
+      setCurrentUrl(id);
+      history.pushState(null, null, `#${id}`);
+    }
+  }, [inView]);
+
   return (
-    <HeroWrapper ref={ref} style={props}>
+    <HeroWrapper ref={ref} style={props} id={id}>
       <Inner>
         {showBrand && <Brand />}
         {title && (

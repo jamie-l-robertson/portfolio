@@ -4,7 +4,7 @@ import config from "../../config"
 import { Inner } from "../../theme"
 import Nav from "./nav"
 import Logo from "../logo"
-import { HeaderWrapper, LogoWrapper, Burger, BurgerBox } from "./styles"
+import { HeaderWrapper, LogoWrapper } from "./styles"
 
 interface HeaderProps {
   siteTitle: string
@@ -16,9 +16,7 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
       <LogoWrapper to="/" aria-label="Jamie Robertson, Back to homepage">
         <Logo />
       </LogoWrapper>
-      <Burger>
-        <BurgerBox />
-      </Burger>
+
       <Nav items={config.navLinks} />
     </Inner>
   </HeaderWrapper>

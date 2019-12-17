@@ -24,8 +24,6 @@ const TransitionWrapper: React.FC<TransitionWrapperProps> = (
     },
     children }) => {
 
-  console.log(children)
-
   const [ref, inView] = useInView(viewProps);
   const props = useSpring(springProps);
 

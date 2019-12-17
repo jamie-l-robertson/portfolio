@@ -1,5 +1,6 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link } from 'gatsby';
+import { urlContext } from '../../store/url.context';
 import { NavList, NavItem } from "./styles"
 
 interface NavProps {
@@ -7,18 +8,23 @@ interface NavProps {
     {
       url: string
       text: string
+      isActive?: boolean
     }
   ]
 }
 
 const Nav: React.FC<NavProps> = ({ items }) => {
+  const { url } = React.useContext(urlContext);
+
   return (
     <NavList>
-      {items.map((item, i) => (
-        <NavItem key={`nav-item${i}`}>
-          {item.url && <Link to={item.url}>{item.text}</Link>}
-        </NavItem>
-      ))}
+      {items.map((item, i) => {
+        return (
+          <NavItem key={`nav-item${i}`} isActive={url.toLowerCase() === item.text.toLowerCase()}>
+            {item.url && <a href={item.url}>{item.text}</a>}
+          </NavItem>
+        )
+      })}
     </NavList>
   )
 }

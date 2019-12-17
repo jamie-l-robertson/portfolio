@@ -12,10 +12,11 @@ import config from '../../config';
 
 interface ContactPanelProps {
   title: string
+  id?: string
   buttonText: string
 }
 
-const ContactPanel: React.FC<ContactPanelProps> = ({ title, buttonText = "Send a message" }) => {
+const ContactPanel: React.FC<ContactPanelProps> = ({ title, buttonText = "Send a message", id = undefined }) => {
   const [ref, inView] = useInView({
     rootMargin: '-100px 0px',
   });
@@ -26,7 +27,7 @@ const ContactPanel: React.FC<ContactPanelProps> = ({ title, buttonText = "Send a
   });
 
   return (
-    <Container>
+    <Container id={id}>
       <Inner>
         <animated.div ref={ref} style={props}>
           <Heading level="2" showDot>{title}</Heading>

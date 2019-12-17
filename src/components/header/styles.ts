@@ -61,7 +61,7 @@ const NavItem = styled(animated.li)`
   }
 
   > a {
-    ${props => props.isactive && `
+    ${props => props.isActive && `
       color: ${props.theme.color.quaternary};
     `}
   }

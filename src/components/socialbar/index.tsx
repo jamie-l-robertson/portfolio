@@ -25,4 +25,4 @@ const SocialBar: React.FC<SocialBarProps> = ({ vertical = false }) => {
   )
 };
 
-export default SocialBar;
+export default SocialBar; 

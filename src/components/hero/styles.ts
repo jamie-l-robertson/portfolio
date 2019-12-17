@@ -62,5 +62,4 @@ const Intro = styled.div`
   }
 `;
 
-
 export { HeroWrapper, HeroHeading, Prefix, Brand, Intro, Dot };

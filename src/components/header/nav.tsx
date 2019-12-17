@@ -10,7 +10,7 @@ interface NavProps {
     {
       url: string
       text: string
-      isactive?: boolean
+      isActive?: boolean
     }
   ]
 };
@@ -22,7 +22,7 @@ const Nav: React.FC<NavProps> = ({ items }) => {
   return (
     <NavList>
       {trail.map((animation, i) => (
-        <NavItem key={`nav-item${i}`} isactive={url.toLowerCase() === items[i].text.toLowerCase()} style={{ ...animation }}>
+        <NavItem key={`nav-item${i}`} isActive={url.toLowerCase() === items[i].text.toLowerCase()} style={{ ...animation }}>
           {items[i].url && <a href={items[i].url}>{items[i].text}</a>}
         </NavItem>
       )

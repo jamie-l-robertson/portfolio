@@ -4,7 +4,6 @@ import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import Heading from "../heading";
 import CustomLink from "../link";
-import TransitionWrapper from "../transitionWrapper";
 import Icon from "../icon";
 import { ContentContainer, Content, ContentMeta } from "./styles";
 import config from "../../shared";

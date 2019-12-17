@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 import {
   Github,
   ExternalLink,
@@ -22,7 +22,7 @@ import {
   Tag,
   Home,
   Codepen,
-} from "styled-icons/feather"
+} from "styled-icons/feather";
 
 const IconMap = {
   Github,
@@ -47,19 +47,18 @@ const IconMap = {
   Tag,
   Home,
   Codepen,
-}
+};
 
 interface IconProps {
   name: string
   size?: number
   rest?: any
   title?: string
-}
+};
 
 const Icon: React.FC<IconProps> = ({ name = "", size = 24, ...rest }) => {
-  const Tag = IconMap[name]
-
+  const Tag = IconMap[name];
   return <Tag size={size} {...rest} />
-}
+};
 
-export default Icon
+export default Icon;

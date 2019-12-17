@@ -1,11 +1,11 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { useSpring } from "react-spring"
-import { useInView } from 'react-intersection-observer'
+import * as React from "react";
+import { Link } from "gatsby";
+import { useSpring } from "react-spring";
+import { useInView } from "react-intersection-observer";
 import { urlContext } from '../../store/url.context';
-import Socialbar from "../socialbar"
+import SocialBar from "../socialbar";
 import TransitionWrapper from '../transitionWrapper';
-import { HeroWrapper, Heading, Prefix, Intro, Brand, Dot } from "./styles"
+import { HeroWrapper, HeroHeading, Prefix, Intro, Brand, Dot } from "./styles"
 import { Inner } from "../../theme";
 
 interface HeroProps {
@@ -27,7 +27,7 @@ interface HeroProps {
       }
     }
   ]
-}
+};
 
 const Hero: React.FC<HeroProps> = ({ showBrand = true, data, id = undefined }) => {
   const { prefix, title, intro, copyNode, link } = data[0];
@@ -51,14 +51,14 @@ const Hero: React.FC<HeroProps> = ({ showBrand = true, data, id = undefined }) =
   }, [inView]);
 
   return (
-    <HeroWrapper ref={ref} style={props} id={id}>
+    <HeroWrapper ref={ref} id={id} style={{ ...props }}>
       <Inner>
         {showBrand && <Brand />}
         {title && (
-          <Heading>
+          <HeroHeading level="1" showDot={true}>
             <Prefix>{prefix}</Prefix>
-            {title}<Dot aria-hidden="true">.</Dot>
-          </Heading>
+            {title}
+          </HeroHeading>
         )}
         {copyNode && (
           <Intro
@@ -68,10 +68,10 @@ const Hero: React.FC<HeroProps> = ({ showBrand = true, data, id = undefined }) =
           />
         )}
         {link && <Link to={link.url}>{link.label}</Link>}
-        <Socialbar />
+        <SocialBar />
       </Inner>
     </HeroWrapper>
   )
-}
+};
 
-export default Hero
+export default Hero;

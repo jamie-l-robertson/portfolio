@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import breakpoint from "styled-components-breakpoint"
+import styled from "styled-components";
+import breakpoint from "styled-components-breakpoint";
 
 const Container = styled.section`
   display: block;
@@ -15,8 +15,7 @@ const Container = styled.section`
     padding: ${props => props.theme.layout.inner.padding.lrg} 0;
     ${props => props.noTop && `padding-top: 0`};
   `};
-
-`
+`;
 
 const Inner = styled.div`
   width: 100%;
@@ -24,6 +23,6 @@ const Inner = styled.div`
   margin-right: auto;
   margin-left: auto;
   padding: 0 ${props => props.theme.layout.inner.padding.sml};
-`
+`;
 
-export { Container, Inner }
+export { Container, Inner };

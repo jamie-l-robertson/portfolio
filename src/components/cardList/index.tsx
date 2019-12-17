@@ -1,17 +1,17 @@
-import * as React from "react"
-import { useSpring, animated } from "react-spring"
-import { useInView } from 'react-intersection-observer'
-import { urlContext } from '../../store/url.context';
-import Card from "../card"
-import Heading from "../heading"
-import { Container, Inner } from "../../theme"
-import { CardsWrapper } from "./styles"
+import * as React from "react";
+import { useSpring, animated } from "react-spring";
+import { useInView } from "react-intersection-observer";
+import { urlContext } from "../../store/url.context";
+import Card from "../card";
+import Heading from "../heading";
+import { Container, Inner } from "../../theme";
+import { CardsWrapper } from "./styles";
 
 interface CardListProps {
   heading: string
   cards?: []
   id?: string
-}
+};
 
 const CardList: React.FC<CardListProps> = ({ heading, cards = [], id = undefined }) => {
   const [ref, inView] = useInView({
@@ -35,7 +35,7 @@ const CardList: React.FC<CardListProps> = ({ heading, cards = [], id = undefined
   return (
     <Container id={id}>
       <Inner>
-        <animated.div ref={ref} style={props}>
+        <animated.div ref={ref} style={{ ...props }}>
           {heading && (
             <Heading level="2" showDot={true}>
               {heading}
@@ -52,6 +52,6 @@ const CardList: React.FC<CardListProps> = ({ heading, cards = [], id = undefined
       </Inner>
     </Container>
   )
-}
+};
 
-export default CardList
+export default CardList;

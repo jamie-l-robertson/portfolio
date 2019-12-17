@@ -1,7 +1,8 @@
-import styled from "styled-components"
-import breakpoint from "styled-components-breakpoint"
-import { Link } from "gatsby"
-import { rem } from "polished"
+import styled from "styled-components";
+import breakpoint from "styled-components-breakpoint";
+import { animated } from "react-spring";
+import { Link } from "gatsby";
+import { rem } from "polished";
 
 const HeaderWrapper = styled.header`
   display: block;
@@ -20,9 +21,9 @@ const HeaderWrapper = styled.header`
   ${breakpoint("tablet")`
     padding: ${rem("40px")} 0 ${rem("80px")};
   `};
-`
+`;
 
-const LogoWrapper = styled(Link)`
+const LogoWrapper = styled(animated(Link))`
   display: inline-block;
   width: 60px;
   height: 35px;
@@ -33,7 +34,7 @@ const LogoWrapper = styled(Link)`
     height: 100%;
     width: auto;
   }
-`
+`;
 
 const NavList = styled.ul`
   display: none;
@@ -48,7 +49,7 @@ const NavList = styled.ul`
   `};
 `;
 
-const NavItem = styled.li`
+const NavItem = styled(animated.li)`
   display: inline-block;
   vertical-align: middle;
   font-weight: 700;
@@ -60,10 +61,10 @@ const NavItem = styled.li`
   }
 
   > a {
-    ${props => props.isActive && `
+    ${props => props.isactive && `
       color: ${props.theme.color.quaternary};
     `}
   }
-`
+`;
 
 export { HeaderWrapper, LogoWrapper, NavList, NavItem }

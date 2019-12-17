@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Link } from 'gatsby';
-import StyledLink from './styles';
+import { Link } from "gatsby";
+import StyledLink from "./styles";
 
 const CustomLink = ({
   external, href, children, className, isActive, showButton, ...props

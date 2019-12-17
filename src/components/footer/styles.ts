@@ -18,7 +18,7 @@ const FooterWrapper = styled.footer`
     margin-bottom: 5px;
 
     ${breakpoint('tablet')`
-    margin-bottom: 0;
+      margin-bottom: 0;
     
       &:first-of-type {
         float: left;
@@ -30,4 +30,5 @@ const FooterWrapper = styled.footer`
     }
   }
 `;
+
 export { FooterWrapper };

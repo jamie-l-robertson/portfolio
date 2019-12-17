@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Globals } from 'react-spring';
-import { useReduceMotion } from '../../helpers/useReduceMotion';
-import { StyledParticles } from './styles';
+import * as React from "react";
+import { Globals } from "react-spring";
+import { useReduceMotion } from "../../helpers/useReduceMotion";
+import { StyledParticles } from "./styles";
 
 const BackgroundParticles = () => {
   const prefersReducedMotion = useReduceMotion();
@@ -76,6 +76,6 @@ const BackgroundParticles = () => {
   return (
     <StyledParticles params={params} />
   )
-}
+};
 
-export default BackgroundParticles
+export default BackgroundParticles;

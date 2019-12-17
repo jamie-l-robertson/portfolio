@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { UrlContext } from '../state/url.context';
+import * as React from "react";
+import { UrlContext } from "../state/url.context";
 
 export const useUrl = (): UrlContext => {
   const [url, setUrl] = React.useState('home');
@@ -11,4 +11,4 @@ export const useUrl = (): UrlContext => {
     url,
     setCurrentUrl
   }
-}
+};

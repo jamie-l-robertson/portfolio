@@ -1,11 +1,10 @@
 import * as React from "react";
-import { useSpring, animated } from "react-spring"
-import { useInView } from 'react-intersection-observer'
-import { urlContext } from '../../store/url.context';
-import { Container, Inner } from '../../theme';
-import Heading from '../heading';
-import { transitionWrapper } from '../transitionWrapper';
-import { Content } from './styles';
+import { useSpring, animated } from "react-spring";
+import { useInView } from "react-intersection-observer";
+import { urlContext } from "../../store/url.context";
+import { Container, Inner } from "../../theme";
+import Heading from "../heading";
+import { Content } from "./styles";
 
 const ContentPanel = ({ content, id }) => {
   const { title, contentNode } = content[0];
@@ -31,7 +30,7 @@ const ContentPanel = ({ content, id }) => {
   return (
     <Container id={id} isInView={inView ? id : null} noTop>
       <Inner>
-        <animated.div ref={ref} style={props}>
+        <animated.div ref={ref} style={{ ...props }}>
           {title && <Heading level="2" showDot>{title}</Heading>}
           <Content dangerouslySetInnerHTML={{ __html: contentNode.childMarkdownRemark.html }} />
         </animated.div>

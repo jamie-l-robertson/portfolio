@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 export const useReduceMotion = () => {
   // Check we aren't server side.
@@ -24,4 +24,4 @@ export const useReduceMotion = () => {
   }, []);
 
   return matches;
-}
+};

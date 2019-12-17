@@ -1,12 +1,12 @@
-import * as React from "react"
-import Icon from "../icon"
+import * as React from "react";
+import Icon from "../icon";
 import {
   CardWrapper,
   CardMeta,
   StyledLink,
   StyledHeading,
   TechItem,
-} from "./styles"
+} from "./styles";
 
 interface CardProps {
   node: {
@@ -19,7 +19,7 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = props => {
-  const { title, repository, projectUrl, intro, projectTech } = props.node
+  const { title, repository, projectUrl, intro, projectTech } = props.node;
 
   return (
     <CardWrapper>
@@ -45,6 +45,6 @@ const Card: React.FC<CardProps> = props => {
       </footer>
     </CardWrapper>
   )
-}
+};
 
-export default Card
+export default Card;

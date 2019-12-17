@@ -1,25 +1,30 @@
-import { Link } from "gatsby"
-import * as React from "react"
-import config from "../../config"
-import { Inner } from "../../theme"
-import Nav from "./nav"
-import Logo from "../logo"
-import { HeaderWrapper, LogoWrapper } from "./styles"
+import { Link } from "gatsby";
+import * as React from "react";
+import { useSpring } from 'react-spring';
+import config from "../../shared";
+import { Inner } from "../../theme";
+import Nav from "./nav";
+import Logo from "../logo";
+import { HeaderWrapper, LogoWrapper } from "./styles";
 
 interface HeaderProps {
   siteTitle: string
-}
+};
 
-const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
-  <HeaderWrapper>
-    <Inner>
-      <LogoWrapper to="/" aria-label="Jamie Robertson, Back to homepage">
-        <Logo />
-      </LogoWrapper>
+const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
+  const springProps = useSpring(config.springs.logo);
 
-      <Nav items={config.navLinks} />
-    </Inner>
-  </HeaderWrapper>
-)
+  return (
+    <HeaderWrapper>
+      <Inner>
+        <LogoWrapper to="/" aria-label="Jamie Robertson, Back to homepage" style={{ ...springProps }} >
+          <Logo />
+        </LogoWrapper>
 
-export default Header
+        <Nav items={config.navLinks} />
+      </Inner>
+    </HeaderWrapper>
+  )
+};
+
+export default Header;

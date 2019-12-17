@@ -1,8 +1,9 @@
-import styled from "styled-components"
-import breakpoint from 'styled-components-breakpoint'
-import { rem } from 'polished'
-import { animated } from "react-spring"
-import { Container } from "../../theme"
+import styled from "styled-components";
+import breakpoint from "styled-components-breakpoint";
+import { rem } from "polished";
+import { animated } from "react-spring";
+import { Container } from "../../theme";
+import Heading from "../heading";
 
 const HeroWrapper = styled(animated(Container))`
   position: relative;
@@ -17,16 +18,16 @@ const HeroWrapper = styled(animated(Container))`
     padding-top: calc(60px + 118px);
   `};
 
-${breakpoint('desktop')`
+  ${breakpoint('desktop')`
     padding-top: calc(120px + 118px); 
   `};
 
   p > a {
     border-bottom: 1px dotted currentColor;
   }
-`
+`;
 
-const Heading = styled.h1`
+const HeroHeading = styled(Heading)`
   display: block;
   position: relative;
   font-size: ${rem('40px')};
@@ -34,7 +35,8 @@ const Heading = styled.h1`
   ${breakpoint('tablet')`
     font-size: ${rem('60px')};
   `};
-`
+  }
+`;
 
 const Prefix = styled.span`
   display: block;
@@ -42,11 +44,11 @@ const Prefix = styled.span`
   color: ${props => props.theme.color.quaternary};
   font-size: ${props => props.theme.font.prefix.sml};
   letter-spacing: initial;
-`
+`;
 
 const Brand = styled.span`
   display: block;
-`
+`;
 
 const Dot = styled.span`
   color: ${props => props.theme.color.quaternary};
@@ -61,4 +63,4 @@ const Intro = styled.div`
 `;
 
 
-export { HeroWrapper, Heading, Prefix, Brand, Intro, Dot }
+export { HeroWrapper, HeroHeading, Prefix, Brand, Intro, Dot };

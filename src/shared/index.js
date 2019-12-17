@@ -12,10 +12,6 @@ const config = {
       url: "#projects",
       text: "Projects",
     },
-    // {
-    //   url: "#contact",
-    //   text: "Contact",
-    // },
   ],
   socialLinks: [
     {
@@ -48,6 +44,23 @@ const config = {
     email: "jrobertson_uk@msn.com",
     intro: "<p>Although I'm not currently looking for any new freelance opportunities, my email is always open. If you would like to discuss a potential project or just say hello!</p>"
   },
-}
+  springs: {
+    logo: {
+      from: { opacity: 0, y: -40 },
+      to: { opacity: 1, y: 0 },
+      config: { tension: 1000, duration: 200 },
+    },
+    iconsHorizontal: {
+      from: { opacity: 0, y: 20 },
+      to: { opacity: 1, y: 0 },
+      config: { tension: 1000 },
+    },
+    navHorizontal: {
+      from: { opacity: 0 },
+      to: { opacity: 1 },
+      config: { tension: 600, duration: 400 },
+    }
+  },
+};
 
-export default config
+export default config;

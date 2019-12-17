@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
+import styled from "styled-components";
+import breakpoint from "styled-components-breakpoint";
 import { rem, rgba } from "polished";
 
 const StyledLink = styled.a`
@@ -23,7 +23,6 @@ const StyledLink = styled.a`
   svg {
     margin-left: ${rem('10px')};
   }
-`
-  ;
+`;
 
 export default StyledLink;

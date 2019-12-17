@@ -1,7 +1,6 @@
-import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
+import styled from "styled-components";
+import breakpoint from "styled-components-breakpoint";
 import { rem } from "polished";
-
 
 const ContentContainer = styled.div`
   display: block;
@@ -29,4 +28,4 @@ const ContentMeta = styled.div`
   `};
 `;
 
-export { ContentContainer, Content, ContentMeta }
+export { ContentContainer, Content, ContentMeta };

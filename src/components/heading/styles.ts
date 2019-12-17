@@ -1,10 +1,10 @@
-import styled, { css } from "styled-components"
-import breakpoint from "styled-components-breakpoint"
-import { rem } from "polished"
+import styled, { css } from "styled-components";
+import breakpoint from "styled-components-breakpoint";
+import { rem } from "polished";
 
 interface StyledHeadingProps {
   readonly hasBorder: boolean
-}
+};
 
 const StyledHeading = styled.h1<StyledHeadingProps>`
   position: relative;
@@ -23,14 +23,13 @@ const StyledHeading = styled.h1<StyledHeadingProps>`
       }
     `}
 
-    > span {
-      font-size: ${rem('40px')};
-      color: ${props => props.theme.color.quaternary}
+    span {
+      color: ${props => props.theme.color.quaternary};
 
-      ${breakpoint('tablet')`
-        font-size: ${rem('60px')};
-      `};
+      &:not([aria-hidden]) {
+        font-size: ${rem('20px')};
+      }
     }
-`
+`;
 
-export default StyledHeading
+export default StyledHeading;

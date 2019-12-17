@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import Particles from 'react-particles-js';
+import styled from "styled-components";
+import Particles from "react-particles-js";
 
 const StyledParticles = styled(Particles)`
   position: absolute;
@@ -10,4 +10,4 @@ const StyledParticles = styled(Particles)`
   height: 100%;
 `;
 
-export { StyledParticles }
+export { StyledParticles };

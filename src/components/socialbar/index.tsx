@@ -1,26 +1,28 @@
-import * as React from "react"
-import Icon from "../icon"
-import config from "../../config"
-import { Items, Item } from "./styles"
+import * as React from "react";
+import { useTrail, animated } from "react-spring";
+import Icon from "../icon";
+import config from "../../shared";
+import { Items, Item } from "./styles";
 
-interface SocialbarProps {
+interface SocialBarProps {
   vertical?: boolean
-}
+};
 
-const Socialbar: React.FC<SocialbarProps> = ({ vertical = false }) => {
-  const channels = config.socialLinks
+const SocialBar: React.FC<SocialBarProps> = ({ vertical = false }) => {
+  const channels = config.socialLinks;
+  const trail = useTrail(channels.length, config.springs.iconsHorizontal);
 
   return (
     <Items>
-      {channels.map((item, i) => (
-        <Item key={`socialbar-item-${i}`}>
-          <a href={item.url} title={item.message} rel="noopener noreferrer" target="_blank">
-            <Icon name={item.icon} />
+      {trail.map((animation, i) => (
+        <Item key={i} style={{ ...animation }}>
+          <a href={channels[i].url} aria-label={channels[i].message} rel="noopener noreferrer" target="_blank">
+            <Icon name={channels[i].icon} />
           </a>
         </Item>
       ))}
     </Items>
   )
-}
+};
 
-export default Socialbar
+export default SocialBar;

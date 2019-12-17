@@ -1,10 +1,10 @@
-import * as React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Hero from "../components/hero"
-import CardList from "../components/cardList"
-import BackgroundParticles from "../components/particles"
+import * as React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import Hero from "../components/hero";
+import CardList from "../components/cardList";
+import BackgroundParticles from "../components/particles";
 import ContentPanel from "../components/contentPanel";
 import ContactPanel from "../components/contactPanel";
 
@@ -71,59 +71,26 @@ export const query = graphql`
         }
       }
     }
-
-    allDatoCmsArticle {
-      edges {
-        node {
-          meta {
-            status
-            createdAt(fromNow: true)
-          }
-          id
-          originalId
-          seoMetaTags {
-            id
-          }
-          locale
-          contentArea {
-            content
-            intro
-          }
-          title
-          featureImage {
-            fixed(width: 360) {
-              aspectRatio
-              width
-              height
-              src
-              srcSet
-              sizes
-            }
-            alt
-          }
-        }
-      }
-    }
   }
-`
+`;
 
 const IndexPage = ({ data }) => {
   const {
     datoCmsHomepage: { hero, about },
     allDatoCmsProject,
-  } = data
+  } = data;
 
 
   return (
     <Layout>
       <SEO title="Home" />
       <BackgroundParticles />
-      <Hero id="home" data={hero} />
-      <ContentPanel id="about" content={about} />
-      <CardList id="projects" heading="Personal projects" cards={allDatoCmsProject.edges} />
+      {hero && <Hero id="home" data={hero} />}
+      {about && <ContentPanel id="about" content={about} />}
+      {allDatoCmsProject && <CardList id="projects" heading="Personal projects" cards={allDatoCmsProject.edges} />}
       <ContactPanel id="contact" title="Get in touch" />
     </Layout>
   )
-}
+};
 
-export default IndexPage
+export default IndexPage;

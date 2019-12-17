@@ -1,7 +1,6 @@
-import React from "react"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from "react";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 import { Container, Inner } from "../theme";
 
 const NotFoundPage = () => (
@@ -14,6 +13,6 @@ const NotFoundPage = () => (
       </Inner>
     </Container>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

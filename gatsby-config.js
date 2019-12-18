@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Jamie Robertson`,
@@ -9,7 +13,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-154164503-1",
+        trackingId: process.env.GOOGLE_TRACKING_ID,
         head: true,
         anonymize: true,
         exclude: ["/preview/**"],
@@ -58,7 +62,7 @@ module.exports = {
       options: {
         // You can find your read-only API token under the Settings > API tokens
         // section of your administrative area:
-        apiToken: `724769e534735262f8a1d5abf2a4d2`,
+        apiToken: process.env.DATO_CMS_TOKEN,
 
         // If you are working on development/staging environment, you might want to
         // preview the latest version of records instead of the published one:

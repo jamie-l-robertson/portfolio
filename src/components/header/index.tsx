@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
   return (
     <HeaderWrapper>
       <Inner>
-        <LogoWrapper to="/" aria-label="Jamie Robertson, Back to homepage" style={{ ...springProps }} >
+        <LogoWrapper to="/" aria-label="Back to homepage" style={{ ...springProps }} >
           <Logo />
         </LogoWrapper>
 

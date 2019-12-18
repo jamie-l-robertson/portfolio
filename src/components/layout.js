@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Globals } from "react-spring";
-import { useReduceMotion } from "../helpers/useReduceMotion";
+import { useReduceMotion } from "../hooks/reduceMotion.hook";
 import { urlContext } from "../store/url.context";
 import { useUrl } from "../hooks/url.hook";
 import { useStaticQuery, graphql } from "gatsby";

@@ -46,14 +46,14 @@ const config = {
   },
   springs: {
     logo: {
-      from: { opacity: 0, y: -40 },
-      to: { opacity: 1, y: 0 },
+      from: { opacity: 0 },
+      to: { opacity: 1 },
       config: { tension: 1000, duration: 200 },
     },
     iconsHorizontal: {
       from: { opacity: 0, y: 20 },
       to: { opacity: 1, y: 0 },
-      config: { tension: 1000 },
+      config: { tension: 800, duration: 180 },
     },
     navHorizontal: {
       from: { opacity: 0 },

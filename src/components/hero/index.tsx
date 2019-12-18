@@ -4,7 +4,6 @@ import { useSpring } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import { urlContext } from '../../store/url.context';
 import SocialBar from "../socialbar";
-import TransitionWrapper from '../transitionWrapper';
 import { HeroWrapper, HeroHeading, Prefix, Intro, Brand, Dot } from "./styles"
 import { Inner } from "../../theme";
 

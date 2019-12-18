@@ -1,11 +1,11 @@
 import * as React from "react";
 import { useTrail, animated } from "react-spring";
-import Icon from "../icon";
-import config from "../../shared";
+import Icon from "@components/icon";
+import config from "@shared";
 import { Items, Item } from "./styles";
 
 interface SocialBarProps {
-  vertical?: boolean
+  vertical: boolean
 };
 
 const SocialBar: React.FC<SocialBarProps> = ({ vertical = false }) => {

@@ -1,12 +1,17 @@
 import * as React from "react";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
-import { urlContext } from "../../store/url.context";
-import { Container, Inner } from "../../theme";
-import Heading from "../heading";
+import { urlContext } from "@stores/url.context";
+import { Container, Inner } from "@theme";
+import Heading from "@components/heading";
 import { Content } from "./styles";
 
-const ContentPanel = ({ content, id }) => {
+interface ContentPanelProps {
+  content: object
+  id: string
+};
+
+const ContentPanel: React.FC<ContentPanelProps> = ({ content, id }) => {
   const { title, contentNode } = content[0];
 
   const [ref, inView, entry] = useInView({

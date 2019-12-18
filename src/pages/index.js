@@ -80,10 +80,9 @@ const IndexPage = ({ data }) => {
     allDatoCmsProject,
   } = data;
 
-
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Hello!" />
       <BackgroundParticles />
       {hero && <Hero id="home" data={hero} />}
       {about && <ContentPanel id="about" content={about} />}

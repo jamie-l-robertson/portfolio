@@ -1,6 +1,6 @@
 import * as React from "react";
 import { animated, useSpring } from "react-spring";
-import config from "../../shared";
+import config from "@shared";
 import StyledHeading from "./styles";
 
 interface HeadingProps {

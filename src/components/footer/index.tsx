@@ -1,5 +1,5 @@
-import * as React from "react"
-import { Inner } from "../../theme"
+import * as React from "react";
+import { Inner } from "@theme";
 import { FooterWrapper } from "./styles";
 
 const Footer = () => (

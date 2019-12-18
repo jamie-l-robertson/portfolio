@@ -2,8 +2,8 @@ import styled from "styled-components";
 import breakpoint from "styled-components-breakpoint";
 import { rem } from "polished";
 import { animated } from "react-spring";
-import { Container } from "../../theme";
-import Heading from "../heading";
+import { Container } from "@theme";
+import Heading from "@components/heading";
 
 const HeroWrapper = styled(animated(Container))`
   position: relative;

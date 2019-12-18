@@ -2,10 +2,10 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { useSpring } from "react-spring";
 import { useInView } from "react-intersection-observer";
-import { urlContext } from '../../store/url.context';
-import SocialBar from "../socialbar";
+import { urlContext } from '@stores/url.context';
+import SocialBar from "@components/socialbar";
+import { Inner } from "@theme";
 import { HeroWrapper, HeroHeading, Prefix, Intro, Brand, Dot } from "./styles"
-import { Inner } from "../../theme";
 
 interface HeroProps {
   showBrand?: boolean

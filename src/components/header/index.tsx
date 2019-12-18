@@ -1,10 +1,10 @@
 import { Link } from "gatsby";
 import * as React from "react";
 import { useSpring } from 'react-spring';
-import config from "../../shared";
-import { Inner } from "../../theme";
+import config from "@shared";
+import { Inner } from "@theme";
+import Logo from "@components/logo";
 import Nav from "./nav";
-import Logo from "../logo";
 import { HeaderWrapper, LogoWrapper } from "./styles";
 
 interface HeaderProps {

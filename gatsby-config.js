@@ -54,42 +54,26 @@ module.exports = {
         background_color: `#B6C649`,
         theme_color: `#B6C649`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`,
       },
     },
     {
       resolve: `gatsby-source-datocms`,
       options: {
-        // You can find your read-only API token under the Settings > API tokens
-        // section of your administrative area:
         apiToken: process.env.DATO_CMS_TOKEN,
-
-        // If you are working on development/staging environment, you might want to
-        // preview the latest version of records instead of the published one:
         previewMode: false,
-
-        // Disable automatic reloading of content when some change occurs on DatoCMS:
         disableLiveReload: false,
-
-        // Custom API base URL
-        // apiUrl: "https://https://portfolio-78.admin.datocms.com/",
-
-        // Setup locale fallbacks
-        // In this example, if some field value is missing in Italian, fall back to English
         localeFallbacks: {
           it: ["en"],
         },
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
           `Roboto`,
-          `Solway`, // you can also specify font weights and styles
+          `Solway`,
         ],
         display: "swap",
       },
@@ -97,17 +81,12 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        // CommonMark mode (default: true)
         commonmark: true,
-        // Footnotes mode (default: true)
         footnotes: true,
-        // Pedantic mode (default: true)
         pedantic: true,
-        // GitHub Flavored Markdown mode (default: true)
         gfm: true,
-        // Plugins configs
         plugins: [],
       },
-    }
+    },
   ],
 }

@@ -88,6 +88,6 @@ module.exports = {
         plugins: [],
       },
     },
-    `gatsby-plugin-netlify-headers`,
+    `gatsby-plugin-netlify`,
   ],
 }

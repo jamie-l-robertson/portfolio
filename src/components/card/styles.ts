@@ -37,7 +37,10 @@ const StyledHeading = styled(Heading)`
 `;
 
 const TechItem = styled.span`
-  font-size: ${rem("16px")};
+  font-family: ${props => props.theme.font.label};
+  font-weight: 700;
+  font-size: ${rem("15px")};
+  line-height: 1.5;
   color: ${props => props.theme.color.quaternary};
 `;
 

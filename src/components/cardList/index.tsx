@@ -33,24 +33,31 @@ const CardList: React.FC<CardListProps> = ({ heading, cards = [], id = undefined
   }, [inView]);
 
   return (
-    <Container id={id}>
-      <Inner>
-        <animated.div ref={ref} style={{ ...props }}>
-          {heading && (
-            <Heading level="2" showDot={true}>
-              {heading}
-            </Heading>
-          )}
-          {cards && (
-            <CardsWrapper>
-              {cards.map((item, i) => (
-                <Card key={`card-${i}`} {...item} />
-              ))}
-            </CardsWrapper>
-          )}
-        </animated.div>
-      </Inner>
-    </Container>
+    <>
+      {
+        cards.length > 0 && (
+          <Container id={id}>
+            <Inner>
+
+              <animated.div ref={ref} style={{ ...props }}>
+                {heading && (
+                  <Heading level="2" showDot={true}>
+                    {heading}
+                  </Heading>
+                )}
+                {cards && (
+                  <CardsWrapper>
+                    {cards.map((item, i) => (
+                      <Card key={`card-${i}`} {...item} />
+                    ))}
+                  </CardsWrapper>
+                )}
+              </animated.div>
+            </Inner>
+          </Container>
+        )
+      }
+    </>
   )
 };
 

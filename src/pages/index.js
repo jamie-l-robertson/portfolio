@@ -45,7 +45,7 @@ export const query = graphql`
     datoCmsGlobalSetting {
       availableForWork
     }
-    allDatoCmsProject {
+    allDatoCmsProject(filter: { featuredProject: { eq: true }}) {
       edges {
         node {
           id

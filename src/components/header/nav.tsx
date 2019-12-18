@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby";
 import { useTrail } from "react-spring";
-import { urlContext } from "../../store/url.context";
-import config from "../../shared";
+import { urlContext } from "@stores/url.context";
+import config from "@shared";
 import { NavList, NavItem } from "./styles";
 
 interface NavProps {

@@ -1,12 +1,12 @@
 import * as React from "react";
-import { Container, Inner } from "../../theme";
+import { Container, Inner } from "@theme";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
-import Heading from "../heading";
-import CustomLink from "../link";
-import Icon from "../icon";
+import Heading from "@components/heading";
+import CustomLink from "@components/link";
+import Icon from "@components/icon";
+import config from "@shared";
 import { ContentContainer, Content, ContentMeta } from "./styles";
-import config from "../../shared";
 
 interface ContactPanelProps {
   title: string

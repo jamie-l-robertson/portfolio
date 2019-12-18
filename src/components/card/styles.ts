@@ -2,7 +2,7 @@ import styled from "styled-components";
 import breakpoint from "styled-components-breakpoint";
 import { rem } from "polished";
 import { Link } from "gatsby";
-import Heading from "../heading";
+import Heading from "@components/heading";
 
 const CardWrapper = styled.article`
   margin-bottom: ${rem('25px')};

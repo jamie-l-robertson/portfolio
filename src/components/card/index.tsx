@@ -1,5 +1,5 @@
 import * as React from "react";
-import Icon from "../icon";
+import Icon from "@components/icon";
 import {
   CardWrapper,
   CardMeta,

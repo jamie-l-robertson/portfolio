@@ -1,10 +1,10 @@
 import * as React from "react";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
-import { urlContext } from "../../store/url.context";
-import Card from "../card";
-import Heading from "../heading";
-import { Container, Inner } from "../../theme";
+import { urlContext } from "@stores/url.context";
+import Card from "@components/card";
+import Heading from "@components/heading";
+import { Container, Inner } from "@theme";
 import { CardsWrapper } from "./styles";
 
 interface CardListProps {

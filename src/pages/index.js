@@ -82,7 +82,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Hello!" />
+      <SEO title="Hello" />
       <BackgroundParticles />
       {hero && <Hero id="home" data={hero} />}
       {about && <ContentPanel id="about" content={about} />}

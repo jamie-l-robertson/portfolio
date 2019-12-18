@@ -1,6 +1,6 @@
 {
   "name": "jamie-robertson-portfolio",
-  "private": true,
+  "private": false,
   "description": "",
   "version": "0.6.0",
   "author": "jrobertson_uk@msn.com",

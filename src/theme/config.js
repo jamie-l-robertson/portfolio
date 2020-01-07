@@ -37,8 +37,12 @@ const theme = {
   breakpoints: {
     tablet: 768,
     desktop: 1024,
-    largeDesktop: 1360,
+    largeDesktop: 1160,
+    largestDesktop: 1360,
   },
+  transitions: {
+    slide: 'cubic-bezier(0.4, 0.0, 0.2, 1)',
+  }
 }
 
 export default theme

@@ -4,13 +4,17 @@ import Icon from "@components/icon";
 import { BackToTopButton } from './styles';
 
 interface BackToTopProps {
-  animate: boolean
+  iconName: string
   scrollType: string
-  offset: number
 };
 
-const BackToTop: React.FC<BackToTopProps> = ({ animate = false, scrollType = "smooth", offset = 0, ...props }) => {
-  const [showOnScroll, setShowOnScroll] = React.useState(true)
+const BackToTop: React.FC<BackToTopProps> = ({
+  scrollType = "smooth",
+  iconName = "ArrowUpCircle",
+  ...props
+}) => {
+
+  const [showOnScroll, setShowOnScroll] = React.useState(false);
 
   const handleClick = () => {
     window.scrollTo({
@@ -20,15 +24,17 @@ const BackToTop: React.FC<BackToTopProps> = ({ animate = false, scrollType = "sm
   }
 
   useScrollPosition(({ prevPos, currPos }) => {
-    const isShow = currPos.y < prevPos.y;
+    const windowOffset = window.pageYOffset - window.innerHeight;
+    const isShow = currPos.y < prevPos.y && currPos.y < windowOffset;
+
     if (isShow !== showOnScroll) setShowOnScroll(isShow);
   }, [showOnScroll]);
 
   return (
     <BackToTopButton onClick={handleClick} type="button" show={showOnScroll} {...props}>
-      <Icon name="ArrowUpCircle" title="Back to top" size={35} />
+      <Icon name={iconName} title="Back to top" size={35} />
     </BackToTopButton>
-  )
+  );
 
 };
 

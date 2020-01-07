@@ -6,19 +6,20 @@ const BackToTopButton = styled.button`
   display: none;
   visibility: hidden;
   opacity: ${props => props.show === true ? 1 : 0};
-  transition: opacity 0.2s ease-in-out;
+  transform: ${props => props.show === true ? `translateY(0)` : `translateY(20px)`};
+  transition: all 0.2s ${props => props.theme.transitions.slide};
+  will-change: opacity;
 
-  ${breakpoint('tablet')`
+  ${breakpoint('largeDesktop')`
      display: block;
      visibility: visible;
      position: fixed;
      z-index: 10;
-     right: 30px;
-     bottom: 25px;
+     right: 22px;
+     bottom: 22px;
      cursor: pointer;
      color: ${props => props.theme.color.quaternary};
   `};
-
 
   &:hover {
     color: ${props => props.theme.color.quinary};
@@ -30,7 +31,6 @@ const BackToTopButton = styled.button`
   }
   
   svg {
-    fill: ${props => props.theme.color.secondary};
     transition: transform 0.1s ease-in-out;
   }
   

@@ -89,7 +89,7 @@ const IndexPage = ({ data }) => {
       {about && <ContentPanel id="about" content={about} />}
       {allDatoCmsProject && <CardList id="projects" heading="Personal projects" cards={allDatoCmsProject.edges} />}
       <ContactPanel id="contact" title="Get in touch" />
-      <BackToTop />
+      <BackToTop offset={200} />
     </Layout>
   )
 };

@@ -7,6 +7,7 @@ import CardList from "../components/cardList";
 import BackgroundParticles from "../components/particles";
 import ContentPanel from "../components/contentPanel";
 import ContactPanel from "../components/contactPanel";
+import BackToTop from '../components/backToTop';
 
 export const query = graphql`
   query IndexQuery {
@@ -88,6 +89,7 @@ const IndexPage = ({ data }) => {
       {about && <ContentPanel id="about" content={about} />}
       {allDatoCmsProject && <CardList id="projects" heading="Personal projects" cards={allDatoCmsProject.edges} />}
       <ContactPanel id="contact" title="Get in touch" />
+      <BackToTop offset={200} />
     </Layout>
   )
 };

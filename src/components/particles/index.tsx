@@ -9,7 +9,7 @@ const BackgroundParticles = () => {
   let params = {
     "particles": {
       "number": {
-        "value": 15,
+        "value": 12,
         "density": {
           "enable": true,
           "value_area": 1262.6362266116362

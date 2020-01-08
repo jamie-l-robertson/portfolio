@@ -2,9 +2,10 @@
   "name": "jamie-robertson-portfolio",
   "private": false,
   "description": "",
-  "version": "0.7.2",
+  "version": "0.8.0",
   "author": "jrobertson_uk@msn.com",
   "dependencies": {
+    "@n8tb1t/use-scroll-position": "^1.0.43",
     "@types/styled-components": "^4.4.0",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.18.4",

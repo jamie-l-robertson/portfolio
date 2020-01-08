@@ -70,7 +70,7 @@ const BackgroundParticles = () => {
         }
       }
     },
-    "retina_detect": true
+    "retina_detect": false
   };
 
   return (

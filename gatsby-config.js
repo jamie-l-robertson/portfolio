@@ -58,6 +58,9 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-offline`,
+    },
+    {
       resolve: `gatsby-source-datocms`,
       options: {
         apiToken: process.env.DATO_CMS_TOKEN,

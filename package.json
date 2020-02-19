@@ -8,6 +8,7 @@
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "@types/styled-components": "^4.4.0",
     "babel-plugin-styled-components": "^1.10.6",
+    "framer-motion": "^1.8.4",
     "gatsby": "^2.19.17",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-google-analytics": "^2.1.29",

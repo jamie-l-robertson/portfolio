@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { urlContext } from '@stores/url.context';
 import SocialBar from "@components/socialbar";
 import { Inner } from "@theme";
+import { inUp } from "@animations";
 import { HeroWrapper, HeroHeading, Prefix, Intro, Brand, Dot } from "./styles"
 
 interface HeroProps {
@@ -50,7 +51,7 @@ const Hero: React.FC<HeroProps> = ({ showBrand = true, data, id = undefined }) =
   }, [inView]);
 
   return (
-    <HeroWrapper ref={ref} id={id} style={{ ...props }}>
+    <HeroWrapper ref={ref} id={id} initial='hidden' animate={inView ? `visible` : `hidden`} variants={inUp}>
       <Inner>
         {showBrand && <Brand />}
         {title && (

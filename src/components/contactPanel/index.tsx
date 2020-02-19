@@ -1,11 +1,12 @@
 import * as React from "react";
 import { Container, Inner } from "@theme";
-import { useSpring, animated } from "react-spring";
+import { motion } from 'framer-motion';
 import { useInView } from "react-intersection-observer";
 import Heading from "@components/heading";
 import CustomLink from "@components/link";
 import Icon from "@components/icon";
 import config from "@shared";
+import { inUp } from "@animations";
 import { ContentContainer, Content, ContentMeta } from "./styles";
 
 interface ContactPanelProps {
@@ -19,15 +20,10 @@ const ContactPanel: React.FC<ContactPanelProps> = ({ title, buttonText = "Send a
     rootMargin: '-100px 0px',
   });
 
-  const props = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? `translate3d(0, 0, 0)` : `translate3d(0, 30px, 0)`
-  });
-
   return (
     <Container id={id}>
       <Inner>
-        <animated.div ref={ref} style={{ ...props }}>
+        <motion.div ref={ref} initial='hidden' animate={inView ? `visible` : `hidden`} variants={inUp}>
           <Heading level="2" showDot>{title}</Heading>
           <ContentContainer>
             <Content dangerouslySetInnerHTML={{ __html: config.contact.intro }} />
@@ -35,7 +31,7 @@ const ContactPanel: React.FC<ContactPanelProps> = ({ title, buttonText = "Send a
               <CustomLink href={`mailto:${config.contact.email}?subject=Website%20Enquiry`} blockLink external>{buttonText}</CustomLink>
             </ContentMeta>
           </ContentContainer>
-        </animated.div>
+        </motion.div>
       </Inner>
     </Container>
   )

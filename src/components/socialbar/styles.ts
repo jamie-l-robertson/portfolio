@@ -1,13 +1,13 @@
 import styled from "styled-components"
 import { rem } from "polished";
-import { animated } from "react-spring";
+import { motion } from "framer-motion";
 
-const Items = styled.ul`
+const Items = styled(motion.ul)`
   margin: ${rem('40px')} 0;
   padding: 0;
 `;
 
-const Item = styled(animated.li)`
+const Item = styled.li`
   display: inline-block;
 
   + li {

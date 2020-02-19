@@ -19,10 +19,10 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = props => {
-  const { title, repository, projectUrl, intro, projectTech } = props.node;
+  const { title, repository, projectUrl, intro, projectTech, ...rest } = props.node;
 
   return (
-    <CardWrapper>
+    <CardWrapper {...rest}>
       <CardMeta>
         {repository && (
           <StyledLink href={repository} rel="noopener noreferrer" target="_blank" aria-label="View project code">

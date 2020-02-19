@@ -7,7 +7,7 @@ const Items = styled(motion.ul)`
   padding: 0;
 `;
 
-const Item = styled.li`
+const Item = styled(motion.li)`
   display: inline-block;
 
   + li {

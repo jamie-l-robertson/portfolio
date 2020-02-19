@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import breakpoint from "styled-components-breakpoint";
-import { animated } from "react-spring";
+import { motion } from "framer-motion";
 import { Link } from "gatsby";
 import { rem } from "polished";
 
@@ -23,7 +23,7 @@ const HeaderWrapper = styled.header`
   `};
 `;
 
-const LogoWrapper = styled(animated(Link))`
+const LogoWrapper = styled(motion.custom(Link))`
   display: inline-block;
   width: 60px;
   height: 35px;
@@ -36,7 +36,7 @@ const LogoWrapper = styled(animated(Link))`
   }
 `;
 
-const NavList = styled.ul`
+const NavList = styled(motion.ul)`
   display: none;
 
   ${breakpoint('tablet')`
@@ -49,7 +49,7 @@ const NavList = styled.ul`
   `};
 `;
 
-const NavItem = styled(animated.li)`
+const NavItem = styled(motion.li)`
   display: inline-block;
   vertical-align: middle;
   font-weight: 700;

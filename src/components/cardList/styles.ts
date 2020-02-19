@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import breakpoint from "styled-components-breakpoint";
+import { motion } from "framer-motion";
 import { rem } from "polished";
-import { animated } from "react-spring";
 
-const CardsWrapper = styled(animated.div)`
+const CardsWrapper = styled(motion.div)`
   display: block;
   position: relative;
 

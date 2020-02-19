@@ -1,6 +1,7 @@
 import * as React from "react";
-import { animated, useSpring } from "react-spring";
+import { motion } from "framer-motion";
 import config from "@shared";
+import { delayedFade } from "@animations";
 import StyledHeading from "./styles";
 
 interface HeadingProps {
@@ -18,12 +19,11 @@ const Heading: React.FC<HeadingProps> = ({
   children,
   ...rest
 }) => {
-  const springProps = useSpring(config.springs.headingDot);
 
   return (
     <StyledHeading as={`h${level}`} hasBorder={border} {...rest}>
       {children}
-      {showDot && <animated.span aria-hidden="true" style={{ ...springProps }}>.</animated.span>}
+      {showDot && <motion.span aria-hidden="true" initial="initial" animate="animate" variants={delayedFade}>.</motion.span>}
     </StyledHeading>
   )
 };

@@ -31,7 +31,7 @@ const ContentPanel: React.FC<ContentPanelProps> = ({ content, id }) => {
   return (
     <Container id={id} isInView={inView ? id : null} noTop>
       <Inner>
-        <motion.div ref={ref} initial='hidden' animate={inView ? `visible` : `hidden`} variants={inUp}>
+        <motion.div ref={ref} initial="initial" animate={inView ? `animate` : `initial`} variants={inUp}>
           {title && <Heading level="2" showDot>{title}</Heading>}
           <Content dangerouslySetInnerHTML={{ __html: contentNode.childMarkdownRemark.html }} />
         </motion.div>

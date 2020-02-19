@@ -5,8 +5,9 @@ import { useInView } from "react-intersection-observer";
 import { urlContext } from '@stores/url.context';
 import SocialBar from "@components/socialbar";
 import { Inner } from "@theme";
-import { inUp } from "@animations";
+import { chained, inUp } from "@animations";
 import { HeroWrapper, HeroHeading, Prefix, Intro, Brand, Dot } from "./styles"
+import { motion } from "framer-motion";
 
 interface HeroProps {
   showBrand?: boolean
@@ -36,11 +37,6 @@ const Hero: React.FC<HeroProps> = ({ showBrand = true, data, id = undefined }) =
     rootMargin: '0px 0px',
   });
 
-  const props = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? `translate3d(0, 0, 0)` : `translate3d(0, 20px, 0)`
-  });
-
   const { setCurrentUrl } = React.useContext(urlContext);
 
   React.useMemo(() => {
@@ -51,23 +47,28 @@ const Hero: React.FC<HeroProps> = ({ showBrand = true, data, id = undefined }) =
   }, [inView]);
 
   return (
-    <HeroWrapper ref={ref} id={id} initial='hidden' animate={inView ? `visible` : `hidden`} variants={inUp}>
+    <HeroWrapper ref={ref} id={id} initial="initial" animate={inView ? `animate` : `initial`} variants={inUp}>
       <Inner>
         {showBrand && <Brand />}
-        {title && (
-          <HeroHeading level="1" showDot={true}>
-            <Prefix>{prefix}</Prefix>
-            {title}
-          </HeroHeading>
-        )}
-        {copyNode && (
-          <Intro
-            dangerouslySetInnerHTML={{
-              __html: copyNode.childMarkdownRemark.html,
-            }}
-          />
-        )}
-        {link && <Link to={link.url}>{link.label}</Link>}
+        <motion.div variants={chained}>
+          {title && (
+            <motion.div variants={inUp}>
+              <HeroHeading level="1" showDot={true}>
+                <Prefix>{prefix}</Prefix>
+                {title}
+              </HeroHeading>
+            </motion.div>
+          )}
+          {copyNode && (
+            <Intro
+              dangerouslySetInnerHTML={{
+                __html: copyNode.childMarkdownRemark.html,
+              }}
+              variants={inUp}
+            />
+          )}
+          {link && <Link to={link.url}>{link.label}</Link>}
+        </motion.div>
         <SocialBar />
       </Inner>
     </HeroWrapper>

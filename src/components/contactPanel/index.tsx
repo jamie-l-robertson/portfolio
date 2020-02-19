@@ -23,7 +23,7 @@ const ContactPanel: React.FC<ContactPanelProps> = ({ title, buttonText = "Send a
   return (
     <Container id={id}>
       <Inner>
-        <motion.div ref={ref} initial='hidden' animate={inView ? `visible` : `hidden`} variants={inUp}>
+        <motion.div ref={ref} initial="initial" animate={inView ? `animate` : `initial`} variants={inUp}>
           <Heading level="2" showDot>{title}</Heading>
           <ContentContainer>
             <Content dangerouslySetInnerHTML={{ __html: config.contact.intro }} />

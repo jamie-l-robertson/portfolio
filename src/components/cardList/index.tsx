@@ -34,7 +34,7 @@ const CardList: React.FC<CardListProps> = ({ heading, cards = [], id = undefined
         cards.length > 0 && (
           <Container id={id}>
             <Inner>
-              <motion.div ref={ref} initial='hidden' animate={inView ? `visible` : `hidden`} variants={inUp}>
+              <motion.div ref={ref} initial="initial" animate={inView ? `animate` : `initial`} variants={inUp}>
                 {heading && (
                   <Heading level="2" showDot={true}>
                     {heading}
@@ -42,9 +42,7 @@ const CardList: React.FC<CardListProps> = ({ heading, cards = [], id = undefined
                 )}
                 {cards && (
                   <CardsWrapper>
-                    {cards.map((item, i) => (
-                      <Card key={`card-${i}`} {...item} />
-                    ))}
+                    {cards.map((item, i) => <Card key={`card-${i}`} {...item} />)}
                   </CardsWrapper>
                 )}
               </motion.div>

@@ -1,8 +1,9 @@
 import { Link } from "gatsby";
 import * as React from "react";
-import { useSpring } from 'react-spring';
+import { motion } from "framer-motion";
 import config from "@shared";
 import { Inner } from "@theme";
+import { inDown } from "@animations";
 import Logo from "@components/logo";
 import Nav from "./nav";
 import { HeaderWrapper, LogoWrapper } from "./styles";
@@ -12,12 +13,10 @@ interface HeaderProps {
 };
 
 const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
-  const springProps = useSpring(config.springs.logo);
-
   return (
     <HeaderWrapper>
       <Inner>
-        <LogoWrapper to="/" aria-label="Back to homepage" style={{ ...springProps }} >
+        <LogoWrapper to="/" aria-label="Back to homepage" initial="initial" animate="animate" variants={inDown}>
           <Logo />
         </LogoWrapper>
 

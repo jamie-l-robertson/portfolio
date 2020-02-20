@@ -2,7 +2,7 @@
   "name": "jamie-robertson-portfolio",
   "private": false,
   "description": "",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "author": "jrobertson_uk@msn.com",
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",
@@ -39,7 +39,6 @@
     "react-intersection-observer": "^8.25.2",
     "react-particles-js": "^2.7.0",
     "react-router-hash-link": "^1.2.2",
-    "react-spring": "^9.0.0-canary.809.5.f01ecc2",
     "smooth-scroll": "^16.1.0",
     "styled-components": "^4.4.1",
     "styled-components-breakpoint": "^3.0.0-preview.20",

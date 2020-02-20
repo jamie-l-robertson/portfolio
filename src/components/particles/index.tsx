@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Globals } from "react-spring";
 import { useReduceMotion } from "@hooks/reduceMotion.hook";
 import { StyledParticles } from "./styles";
 

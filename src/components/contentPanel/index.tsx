@@ -1,9 +1,12 @@
 import * as React from "react";
-import { useSpring, animated } from "react-spring";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { urlContext } from "@stores/url.context";
+import { prefersReducedMotionContext } from "@stores/reduceMotion.context";
+import { useReduceMotion } from "@hooks/reduceMotion.hook";
 import { Container, Inner } from "@theme";
 import Heading from "@components/heading";
+import { inUp } from "@animations";
 import { Content } from "./styles";
 
 interface ContentPanelProps {
@@ -13,17 +16,9 @@ interface ContentPanelProps {
 
 const ContentPanel: React.FC<ContentPanelProps> = ({ content, id }) => {
   const { title, contentNode } = content[0];
-
-  const [ref, inView, entry] = useInView({
-    rootMargin: '-100px 0px',
-  });
-
-  const props = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? `translate3d(0, 0, 0)` : `translate3d(0, 30px, 0)`
-  });
-
+  const [ref, inView, entry] = useInView({ rootMargin: '-100px 0px' });
   const { setCurrentUrl } = React.useContext(urlContext);
+  const { reducedMotion } = React.useContext(prefersReducedMotionContext);
 
   React.useMemo(() => {
     if (inView) {
@@ -35,10 +30,10 @@ const ContentPanel: React.FC<ContentPanelProps> = ({ content, id }) => {
   return (
     <Container id={id} isInView={inView ? id : null} noTop>
       <Inner>
-        <animated.div ref={ref} style={{ ...props }}>
+        <motion.div ref={ref} initial="initial" animate={inView ? `animate` : `initial`} variants={inUp} custom={reducedMotion}>
           {title && <Heading level="2" showDot>{title}</Heading>}
           <Content dangerouslySetInnerHTML={{ __html: contentNode.childMarkdownRemark.html }} />
-        </animated.div>
+        </motion.div>
       </Inner>
     </Container>
   );

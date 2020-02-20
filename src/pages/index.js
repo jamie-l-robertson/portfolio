@@ -1,6 +1,5 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { prefersReducedMotionContext } from "@stores/reduceMotion.context";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
@@ -84,21 +83,13 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <prefersReducedMotionContext.Consumer>
-        {context => {
-          return (
-            <>
-              <SEO title="Hello" />
-              <BackgroundParticles />
-              {hero && <Hero id="home" data={hero} />}
-              {about && <ContentPanel id="about" content={about} />}
-              {allDatoCmsProject && <CardList id="projects" heading="Personal projects" cards={allDatoCmsProject.edges} />}
-              <ContactPanel id="contact" title="Get in touch" />
-              <BackToTop offset={200} />
-            </>
-          )
-        }}
-      </prefersReducedMotionContext.Consumer>
+      <SEO title="Hello" />
+      <BackgroundParticles />
+      {hero && <Hero id="home" data={hero} />}
+      {about && <ContentPanel id="about" content={about} />}
+      {allDatoCmsProject && <CardList id="projects" heading="Personal projects" cards={allDatoCmsProject.edges} />}
+      <ContactPanel id="contact" title="Get in touch" />
+      <BackToTop offset={200} />
     </Layout>
   )
 };

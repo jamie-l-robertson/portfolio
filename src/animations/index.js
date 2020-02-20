@@ -1,13 +1,13 @@
 const easing = [0.6, -0.5, 0.01, 0.99];
 
 const inUp = {
-  initial: {
+  initial: reducedMotion => ({
     opacity: 0,
-    y: 30,
+    y: !reducedMotion ? 30 : 0,
     transition: {
       ease: easing,
     }
-  },
+  }),
   animate: {
     opacity: 1,
     y: 0,
@@ -19,13 +19,13 @@ const inUp = {
 };
 
 const inUpDelayed = {
-  initial: {
+  initial: reducedMotion => ({
     opacity: 0,
-    y: 30,
+    y: !reducedMotion ? 30 : 0,
     transition: {
       ease: easing,
     }
-  },
+  }),
   animate: {
     opacity: 1,
     y: 0,
@@ -37,13 +37,13 @@ const inUpDelayed = {
 };
 
 const inDown = {
-  initial: {
+  initial: reducedMotion => ({
     opacity: 0,
-    y: -20,
+    y: !reducedMotion ? -20 : 0,
     transition: {
       ease: easing,
     }
-  },
+  }),
   animate: {
     opacity: 1,
     y: 0,
@@ -56,11 +56,11 @@ const inDown = {
 };
 
 const inHorizontal = {
-  initial: {
+  initial: reducedMotion => ({
     opacity: 0,
-    x: -20,
+    x: !reducedMotion ? -20 : 0,
     transition: easing
-  },
+  }),
   animate: {
     opacity: 1,
     x: 0,

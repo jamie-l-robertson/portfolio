@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { useSpring } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import { urlContext } from '@stores/url.context';
+import { prefersReducedMotionContext } from "@stores/reduceMotion.context";
 import SocialBar from "@components/socialbar";
 import { Inner } from "@theme";
 import { chained, inUp } from "@animations";
@@ -30,14 +30,15 @@ interface HeroProps {
   ]
 };
 
-const Hero: React.FC<HeroProps> = ({ showBrand = true, data, id = undefined }) => {
+const Hero: React.FC<HeroProps> = ({
+  showBrand = true,
+  data,
+  id = undefined
+}) => {
   const { prefix, title, intro, copyNode, link } = data[0];
-
-  const [ref, inView] = useInView({
-    rootMargin: '0px 0px',
-  });
-
+  const [ref, inView] = useInView({ rootMargin: '0px 0px' });
   const { setCurrentUrl } = React.useContext(urlContext);
+  const { reducedMotion } = React.useContext(prefersReducedMotionContext);
 
   React.useMemo(() => {
     if (inView) {
@@ -47,12 +48,12 @@ const Hero: React.FC<HeroProps> = ({ showBrand = true, data, id = undefined }) =
   }, [inView]);
 
   return (
-    <HeroWrapper ref={ref} id={id} initial="initial" animate={inView ? `animate` : `initial`} variants={inUp}>
+    <HeroWrapper ref={ref} id={id} initial="initial" animate={inView ? `animate` : `initial`} custom={reducedMotion} variants={inUp}>
       <Inner>
         {showBrand && <Brand />}
         <motion.div variants={chained}>
           {title && (
-            <motion.div variants={inUp}>
+            <motion.div custom={reducedMotion} variants={inUp}>
               <HeroHeading level="1" showDot={true}>
                 <Prefix>{prefix}</Prefix>
                 {title}
@@ -64,6 +65,7 @@ const Hero: React.FC<HeroProps> = ({ showBrand = true, data, id = undefined }) =
               dangerouslySetInnerHTML={{
                 __html: copyNode.childMarkdownRemark.html,
               }}
+              custom={reducedMotion}
               variants={inUp}
             />
           )}

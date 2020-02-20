@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import * as React from "react";
 import { motion } from "framer-motion";
+import { prefersReducedMotionContext } from "@stores/reduceMotion.context";
 import config from "@shared";
 import { Inner } from "@theme";
 import { inDown } from "@animations";
@@ -13,14 +14,16 @@ interface HeaderProps {
 };
 
 const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
+  const { reducedMotion } = React.useContext(prefersReducedMotionContext);
+
   return (
     <HeaderWrapper>
       <Inner>
-        <LogoWrapper to="/" aria-label="Back to homepage" initial="initial" animate="animate" variants={inDown}>
+        <LogoWrapper to="/" aria-label="Back to homepage" initial="initial" animate="animate" custom={reducedMotion} variants={inDown}>
           <Logo />
         </LogoWrapper>
 
-        <Nav items={config.navLinks} />
+        <Nav items={config.navLinks} reduceMotion={reducedMotion} />
       </Inner>
     </HeaderWrapper>
   )

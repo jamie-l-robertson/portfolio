@@ -11,6 +11,7 @@ const CardWrapper = styled.article`
   transition: all 0.2s ease-in-out;
 
   ${breakpoint('tablet')`
+    height: 100%;
     margin-bottom: 0;
   `};
 `;

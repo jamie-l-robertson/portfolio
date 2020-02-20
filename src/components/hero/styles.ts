@@ -59,6 +59,10 @@ const Intro = styled(motion.div)`
 
   p {
     font-size: ${rem('20px')};
+
+    ${breakpoint('desktop')`
+      font-size: ${rem('22px')};
+  `};
   }
 `;
 

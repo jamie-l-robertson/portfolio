@@ -13,7 +13,6 @@ const Container = styled.section`
 
   ${breakpoint('desktop')`
     padding: ${props => props.theme.layout.inner.padding.lrg} 0;
-    ${props => props.noTop && `padding-top: 0`};
   `};
 `;
 

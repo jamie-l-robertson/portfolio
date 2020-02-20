@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link } from "gatsby";
-import { useTrail } from "react-spring";
 import { motion } from "framer-motion";
 import { urlContext } from "@stores/url.context";
 import { prefersReducedMotionContext } from "@stores/reduceMotion.context";

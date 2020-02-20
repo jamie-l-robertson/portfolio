@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import breakpoint from "styled-components-breakpoint";
+import { motion } from "framer-motion";
 import { rem } from "polished";
 
-const ContentContainer = styled.div`
+const ContentContainer = styled(motion.div)`
   display: block;
 
   ${breakpoint('tablet')`
@@ -22,7 +23,7 @@ const Content = styled.div`
   `};
 `;
 
-const ContentMeta = styled.div`
+const ContentMeta = styled(motion.div)`
   ${breakpoint('tablet')`
     text-align: center;
   `};

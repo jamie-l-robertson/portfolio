@@ -13,7 +13,6 @@ interface CardListProps {
   heading: string
   cards?: []
   id?: string
-  reducedMotion?: boolean
 };
 
 const CardList: React.FC<CardListProps> = ({

@@ -2,7 +2,7 @@
   "name": "jamie-robertson-portfolio",
   "private": false,
   "description": "",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "author": "jrobertson_uk@msn.com",
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",

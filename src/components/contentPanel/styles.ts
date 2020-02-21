@@ -5,7 +5,7 @@ import { rem } from "polished";
 
 const Content = styled(motion.div)`
   display: block;
-  max-width: 760px;
+  max-width: 860px;
 
   ul, ol {
     display: grid;

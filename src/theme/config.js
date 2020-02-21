@@ -16,7 +16,7 @@ const theme = {
   },
   layout: {
     inner: {
-      maxWidth: "1024px",
+      maxWidth: "1160px",
       padding: {
         sml: "30px",
         md: "60px",

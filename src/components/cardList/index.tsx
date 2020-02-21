@@ -6,7 +6,7 @@ import { prefersReducedMotionContext } from "@stores/reduceMotion.context";
 import Card from "@components/card";
 import Heading from "@components/heading";
 import { Container, Inner } from "@theme";
-import { inUp } from '@animations';
+import { inUp, chained } from '@animations';
 import { CardsWrapper } from "./styles";
 
 interface CardListProps {
@@ -44,9 +44,14 @@ const CardList: React.FC<CardListProps> = ({
                   </Heading>
                 )}
                 {cards && (
-                  <CardsWrapper>
-                    {cards.map((item, i) => <Card key={`card-${i}`} {...item} />)}
+                  <CardsWrapper variants={chained}>
+                    {cards.map((item, i) => (
+                      <motion.div key={`card-${i}`} variants={inUp}>
+                        <Card {...item} />
+                      </motion.div>
+                    ))}
                   </CardsWrapper>
+
                 )}
               </motion.div>
             </Inner>

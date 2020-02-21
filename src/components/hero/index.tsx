@@ -4,8 +4,9 @@ import { useInView } from "react-intersection-observer";
 import { urlContext } from '@stores/url.context';
 import { prefersReducedMotionContext } from "@stores/reduceMotion.context";
 import SocialBar from "@components/socialbar";
+import ScrollHint from "@components/scrollHint";
 import { Inner } from "@theme";
-import { chained, inUp } from "@animations";
+import { chained, inUp, inDown } from "@animations";
 import { HeroWrapper, HeroHeading, Prefix, Intro, Brand, Dot } from "./styles"
 import { motion } from "framer-motion";
 
@@ -72,6 +73,7 @@ const Hero: React.FC<HeroProps> = ({
           {link && <Link to={link.url}>{link.label}</Link>}
         </motion.div>
         <SocialBar />
+        <ScrollHint />
       </Inner>
     </HeroWrapper>
   )

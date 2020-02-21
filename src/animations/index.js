@@ -71,6 +71,20 @@ const inHorizontal = {
   }
 };
 
+const fade = {
+  initial: {
+    opacity: 0,
+
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      ease: easing,
+      delay: 0.3,
+    }
+  }
+};
+
 const delayedFade = {
   initial: {
     opacity: 0,
@@ -95,4 +109,4 @@ const chained = {
 };
 
 
-export { inUp, inDown, inUpDelayed, delayedFade, inHorizontal, chained };  
+export { inUp, inDown, inUpDelayed, fade, delayedFade, inHorizontal, chained };  

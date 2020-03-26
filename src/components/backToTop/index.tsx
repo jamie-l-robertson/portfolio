@@ -31,7 +31,7 @@ const BackToTop: React.FC<BackToTopProps> = ({
   }, [showOnScroll]);
 
   return (
-    <BackToTopButton onClick={handleClick} type="button" show={showOnScroll} {...props}>
+    <BackToTopButton onClick={handleClick} type="button" show={showOnScroll} aria-label="Back to top" {...props}>
       <Icon name={iconName} title="Back to top" size={35} />
     </BackToTopButton>
   );

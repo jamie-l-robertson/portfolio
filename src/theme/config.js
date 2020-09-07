@@ -1,6 +1,6 @@
 // https://coolors.co/c1c1c1-2c4251-d16666-b6c649-ffffff
 
-const theme = {
+const config = {
   color: {
     primary: "#C1C1C1",
     secondary: "#2C4251",
@@ -45,4 +45,4 @@ const theme = {
   }
 }
 
-export default theme
+export default config

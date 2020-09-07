@@ -7,7 +7,7 @@ const BackToTopButton = styled.button`
   visibility: hidden;
   opacity: ${props => props.show === true ? 1 : 0};
   transform: ${props => props.show === true ? `translateY(0)` : `translateY(20px)`};
-  transition: all 0.2s ${props => props.theme.transitions.slide};
+  transition: all 0.2s ${props => props.theme.config.transitions.slide};
   will-change: opacity;
 
   ${breakpoint('largeDesktop')`
@@ -18,11 +18,11 @@ const BackToTopButton = styled.button`
      right: 22px;
      bottom: 22px;
      cursor: pointer;
-     color: ${props => props.theme.color.quaternary};
+     color: ${props => props.theme.config.color.quaternary};
   `};
 
   &:hover {
-    color: ${props => props.theme.color.quinary};
+    color: ${props => props.theme.config.color.quinary};
 
     svg {
       transform: scale(1.1);

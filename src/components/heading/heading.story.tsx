@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 
 import Heading from './index';
 
-const story = storiesOf('Components|Card', module)
+const story = storiesOf('Components|Heading', module)
   .addDecorator(withA11y)
   .addDecorator(withInfo);
 

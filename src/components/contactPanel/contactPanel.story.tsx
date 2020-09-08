@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
-import { withInfo } from '@storybook/addon-info';
 
 import ContactPanel from './index';
 
@@ -12,7 +11,6 @@ const props = {
 };
 
 const story = storiesOf('Components|Contact panel', module)
-  .addDecorator(withA11y)
-  .addDecorator(withInfo);
+  .addDecorator(withA11y);
 
-story.add('Contact panel Component', () => <ContactPanel {...props} />);
+story.add('default', () => <ContactPanel {...props} />);

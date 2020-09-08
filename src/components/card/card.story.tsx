@@ -19,4 +19,4 @@ const story = storiesOf('Components|Card', module)
   .addDecorator(withA11y)
   .addDecorator(withInfo);
 
-story.add('Card Component', () => <Card {...props} />);
+story.add('default', () => <Card {...props} />);

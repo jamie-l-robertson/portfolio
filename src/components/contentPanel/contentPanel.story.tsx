@@ -21,4 +21,4 @@ const story = storiesOf('Components|Content panel', module)
   .addDecorator(withA11y)
   .addDecorator(withInfo);
 
-story.add('Content panel Component', () => <ContentPanel {...props} />);
+story.add('default', () => <ContentPanel {...props} />);

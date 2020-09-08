@@ -9,7 +9,7 @@ const story = storiesOf('Components|Heading', module)
   .addDecorator(withA11y)
   .addDecorator(withInfo);
 
-story.add('Heading Component', () => {
+story.add('All headings', () => {
   return (
     <>
       <Heading level="1">Heading level 1</Heading>

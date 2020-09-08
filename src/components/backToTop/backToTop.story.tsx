@@ -15,4 +15,4 @@ const story = storiesOf('Components|backToTop', module)
   .addDecorator(withA11y)
   .addDecorator(withInfo);
 
-story.add('Back to top Component', () => <BackToTop show={true} {...props} />);
+story.add('default', () => <BackToTop show={true} {...props} />);

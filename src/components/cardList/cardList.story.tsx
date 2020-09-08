@@ -34,4 +34,4 @@ const story = storiesOf('Components|Card list', module)
   .addDecorator(withA11y)
   .addDecorator(withInfo);
 
-story.add('Card List Component', () => <CardList {...props} />);
+story.add('default', () => <CardList {...props} />);

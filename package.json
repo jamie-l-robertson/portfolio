@@ -1,8 +1,8 @@
 {
   "name": "jamie-robertson-portfolio",
   "private": false,
-  "description": "",
-  "version": "0.10.3",
+  "description": "Personal portfolio and playground",
+  "version": "0.11.0",
   "author": "jrobertson_uk@msn.com",
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",
@@ -55,7 +55,9 @@
     "@storybook/addon-options": "5.0.11",
     "@storybook/addon-storysource": "^6.0.21",
     "@storybook/addon-viewport": "5.0.11",
+    "@storybook/addons": "^6.0.21",
     "@storybook/react": "^5.2.5",
+    "@storybook/theming": "^6.0.21",
     "@types/react-helmet": "^5.0.13",
     "@types/storybook__addon-info": "^4.1.2",
     "@types/storybook__react": "^4.0.2",
@@ -89,6 +91,6 @@
     "clean": "gatsby clean",
     "build": "yarn build:gatsby && npm run build:storybook",
     "build:gatsby": "gatsby build",
-    "build:storybook": "build-storybook -c .storybook -o public/docs"
+    "build:storybook": "build-storybook -c .storybook -o public"
   }
 }

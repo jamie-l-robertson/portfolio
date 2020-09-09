@@ -1,6 +1,6 @@
 // https://coolors.co/c1c1c1-2c4251-d16666-b6c649-ffffff
 
-const theme = {
+const config = {
   color: {
     primary: "#C1C1C1",
     secondary: "#2C4251",
@@ -41,8 +41,8 @@ const theme = {
     largestDesktop: 1360,
   },
   transitions: {
-    slide: 'cubic-bezier(0.4, 0.0, 0.2, 1)',
+    slide: "cubic-bezier(0.4, 0.0, 0.2, 1)",
   }
 }
 
-export default theme
+export default config

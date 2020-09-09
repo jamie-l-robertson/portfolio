@@ -49,7 +49,7 @@ display: block;
 position: absolute;
 width: 3px;
 height: 3px;
-background-color: ${ props => props.theme.color.quaternary};
+background-color: ${ props => props.theme.config.color.quaternary};
 border-radius: 100%;
 top: 10px;
 left: 50%;

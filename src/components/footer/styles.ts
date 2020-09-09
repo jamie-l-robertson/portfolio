@@ -6,7 +6,7 @@ const FooterWrapper = styled.footer`
   display; block;
   position: relative;
   padding: ${rem('30px')} 0;
-  background-color: ${props => props.theme.color.footer};
+  background-color: ${props => props.theme.config.color.footer};
   text-align: right;
 
   a {

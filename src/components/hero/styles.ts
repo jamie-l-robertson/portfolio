@@ -41,8 +41,8 @@ const HeroHeading = styled(Heading)`
 const Prefix = styled.span`
   display: block;
   margin-bottom: ${rem('10px')};
-  color: ${props => props.theme.color.quaternary};
-  font-size: ${props => props.theme.font.prefix.sml};
+  color: ${props => props.theme.config.color.quaternary};
+  font-size: ${props => props.theme.config.font.prefix.sml};
   letter-spacing: initial;
 `;
 
@@ -51,7 +51,7 @@ const Brand = styled.span`
 `;
 
 const Dot = styled.span`
-  color: ${props => props.theme.color.quaternary};
+  color: ${props => props.theme.config.color.quaternary};
 `;
 
 const Intro = styled(motion.div)`

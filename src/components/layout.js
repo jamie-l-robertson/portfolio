@@ -5,7 +5,7 @@ import { prefersReducedMotionContext } from "@stores/reduceMotion.context";
 import { useUrl } from "@hooks/url.hook";
 import { useReduceMotion } from "@hooks/reduceMotion.hook";
 import { urlContext } from "@stores/url.context";
-import { theme, GlobalStyle } from "@theme";
+import theme from "@theme";
 import Header from "@components/header";
 import Footer from "@components/footer";
 
@@ -15,6 +15,8 @@ if (typeof window !== 'undefined') {
     offset: '120'
   })
 }
+
+const GlobalStyle = theme.GlobalStyle;
 
 const Layout = ({ children, ...props }) => {
   const url = useUrl();

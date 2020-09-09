@@ -19,12 +19,12 @@ const StyledHeading = styled.h1<StyledHeadingProps>`
         height: 3px;
         width: 80px;
         margin-top: 35px;
-        background-color: ${props.theme.color.quaternary};
+        background-color: ${props.theme.config.color.quaternary};
       }
     `}
 
     span {
-      color: ${props => props.theme.color.quaternary};
+      color: ${props => props.theme.config.color.quaternary};
 
       &:not([aria-hidden]) {
         font-size: ${rem('20px')};

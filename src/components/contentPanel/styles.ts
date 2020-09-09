@@ -30,7 +30,7 @@ const Content = styled(motion.div)`
         content: "";
         width: 5px;
         height: 5px;
-        background-color: ${props => props.theme.color.quaternary};
+        background-color: ${props => props.theme.config.color.quaternary};
         vertical-align: middle;
         border-radius: 100%;
       }

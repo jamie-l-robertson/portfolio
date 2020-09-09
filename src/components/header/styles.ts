@@ -27,7 +27,7 @@ const LogoWrapper = styled(motion.custom(Link))`
   display: inline-block;
   width: 60px;
   height: 35px;
-  color: ${props => props.theme.color.quaternary};
+  color: ${props => props.theme.config.color.quaternary};
 
   svg {
     display: block;
@@ -54,7 +54,7 @@ const NavItem = styled(motion.li)`
   vertical-align: middle;
   font-weight: 700;
   font-size: ${rem('18px')};
-  font-family: ${props => props.theme.font.label};
+  font-family: ${props => props.theme.config.font.label};
 
   + li {
     margin-left: ${rem('30px')};
@@ -62,7 +62,7 @@ const NavItem = styled(motion.li)`
 
   > a {
     ${props => props.isActive && `
-      color: ${props.theme.color.quaternary};
+      color: ${props.theme.config.color.quaternary};
     `}
   }
 `;

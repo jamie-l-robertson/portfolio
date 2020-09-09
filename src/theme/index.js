@@ -1,8 +1,11 @@
 import GlobalStyle from "./global";
-import theme from "./config";
+import config from "./config";
 import fonts from "./fonts";
 import mixins from "./mixins";
 import media from "./media";
 import { Container, Inner } from "./layout";
 
-export { GlobalStyle, theme, mixins, media, fonts, Container, Inner };
+const theme = { GlobalStyle, config, mixins, media, fonts, Container, Inner };
+
+export { GlobalStyle, config, mixins, media, fonts, Container, Inner };
+export default theme;  

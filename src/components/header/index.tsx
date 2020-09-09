@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ siteTitle }) => {
   return (
     <HeaderWrapper>
       <Inner>
-        <LogoWrapper to="/" aria-label="Back to homepage" initial="initial" animate="animate" custom={reducedMotion} variants={inDown}>
+        <LogoWrapper to="/" aria-label="Back to homepage" initial="initial" animate="animate" variants={inDown}>
           <Logo />
         </LogoWrapper>
 

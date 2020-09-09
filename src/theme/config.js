@@ -34,12 +34,6 @@ const config = {
       sml: "34px",
     },
   },
-  breakpoints: {
-    tablet: 768,
-    desktop: 1024,
-    largeDesktop: 1160,
-    largestDesktop: 1360,
-  },
   transitions: {
     slide: "cubic-bezier(0.4, 0.0, 0.2, 1)",
   }

@@ -14,12 +14,13 @@ interface CardProps {
     repository?: string
     projectUrl?: string
     intro: string
-    projectTech: Array<string>
+    projectTech: string
   }
 }
 
 const Card: React.FC<CardProps> = props => {
   const { title, repository, projectUrl, intro, projectTech, ...rest } = props.node;
+  const tech = JSON.parse(projectTech);
 
   return (
     <CardWrapper {...rest}>
@@ -38,8 +39,8 @@ const Card: React.FC<CardProps> = props => {
       <StyledHeading level="3">{title}</StyledHeading>
       {intro && <p>{intro}</p>}
       <footer>
-        {projectTech &&
-          projectTech.map((item, i) => (
+        {tech &&
+          tech.map((item, i) => (
             <TechItem key={`tech-${item}-${i}`}>{(i ? ',  ' : '') + item}</TechItem>
           ))}
       </footer>

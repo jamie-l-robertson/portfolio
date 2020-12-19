@@ -92,5 +92,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-webpack-size`
   ],
 }

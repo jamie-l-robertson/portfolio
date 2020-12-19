@@ -20,11 +20,11 @@ const CardList: React.FC<CardListProps> = ({
   cards = [],
   id = undefined
 }) => {
-  const [ref, inView] = useInView({ rootMargin: '-100px 0px' });
+  const { ref, inView } = useInView({ rootMargin: '-100px 0px' });
   const { setCurrentUrl } = React.useContext(urlContext);
   const { reducedMotion } = React.useContext(prefersReducedMotionContext);
 
-  React.useMemo(() => {
+  React.useEffect(() => {
     if (inView) {
       setCurrentUrl(id);
       history.pushState(null, null, `#${id}`);

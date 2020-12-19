@@ -20,7 +20,7 @@ const ContentPanel: React.FC<ContentPanelProps> = ({ content, id }) => {
   const { setCurrentUrl } = React.useContext(urlContext);
   const { reducedMotion } = React.useContext(prefersReducedMotionContext);
 
-  React.useMemo(() => {
+  React.useEffect(() => {
     if (inView) {
       setCurrentUrl(id);
       history.pushState(null, null, `#${id}`);

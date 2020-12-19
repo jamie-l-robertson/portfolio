@@ -5,7 +5,6 @@ import { useInView } from "react-intersection-observer";
 import { prefersReducedMotionContext } from "@stores/reduceMotion.context";
 import Heading from "@components/heading";
 import CustomLink from "@components/link";
-import Icon from "@components/icon";
 import config from "@shared";
 import { inUp, fade, chained } from "@animations";
 import { ContentContainer, Content, ContentMeta } from "./styles";
@@ -21,7 +20,7 @@ const ContactPanel: React.FC<ContactPanelProps> = ({
   buttonText = "Send a message",
   id = undefined
 }) => {
-  const [ref, inView] = useInView({ rootMargin: '-100px 0px' });
+  const { ref, inView } = useInView({ rootMargin: '-100px 0px' });
   const { reducedMotion } = React.useContext(prefersReducedMotionContext);
 
   return (

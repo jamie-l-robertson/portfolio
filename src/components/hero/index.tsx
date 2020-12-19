@@ -41,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({
   const { setCurrentUrl } = React.useContext(urlContext);
   const { reducedMotion } = React.useContext(prefersReducedMotionContext);
 
-  React.useMemo(() => {
+  React.useEffect(() => {
     if (inView) {
       setCurrentUrl(id);
       history.pushState(null, null, `#${id}`);

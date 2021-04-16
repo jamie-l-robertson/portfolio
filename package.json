@@ -43,7 +43,9 @@
     "styled-components": "^5.2.1",
     "styled-components-breakpoint": "^3.0.0-preview.20",
     "styled-icons": "^9.0.1",
-    "styled-reset-advanced": "^1.0.3"
+    "styled-reset-advanced": "^1.0.3",
+    "gatsby-plugin-netlify": "^2.8.0",
+    "gatsby-plugin-netlify-headers": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

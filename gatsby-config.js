@@ -27,8 +27,6 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -88,7 +86,7 @@ module.exports = {
         plugins: [],
       },
     },
-    // `gatsby-plugin-netlify`,
-    // `gatsby-plugin-webpack-size`
-  ],
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-react-helmet`
+  ]
 }

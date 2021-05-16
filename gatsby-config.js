@@ -65,10 +65,7 @@ module.exports = {
       options: {
         apiToken: process.env.DATO_CMS_TOKEN,
         previewMode: false,
-        disableLiveReload: false,
-        localeFallbacks: {
-          it: ["en"],
-        },
+        disableLiveReload: false
       },
     },
     {
@@ -91,7 +88,7 @@ module.exports = {
         plugins: [],
       },
     },
-    `gatsby-plugin-netlify`,
-    `gatsby-plugin-webpack-size`
+    // `gatsby-plugin-netlify`,
+    // `gatsby-plugin-webpack-size`
   ],
 }

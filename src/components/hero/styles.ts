@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Container } from "@theme";
 import Heading from "@components/heading";
 
-const HeroWrapper = styled(motion.custom(Container))`
+const HeroWrapper = styled(motion(Container))`
   position: relative;
   display: flex;
   min-height: 100vh;

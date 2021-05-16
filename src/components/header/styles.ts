@@ -23,7 +23,7 @@ const HeaderWrapper = styled.header`
   `};
 `;
 
-const LogoWrapper = styled(motion.custom(Link))`
+const LogoWrapper = styled(motion(Link))`
   display: inline-block;
   width: 60px;
   height: 35px;

@@ -1,9 +1,6 @@
 import * as React from "react"
-import { Link } from "gatsby";
-import { m } from "framer-motion";
 import { urlContext } from "@stores/url.context";
 import { prefersReducedMotionContext } from "@stores/reduceMotion.context";
-import config from "@shared";
 import { inHorizontal, chained } from "@animations";
 import { NavList, NavItem } from "./styles";
 

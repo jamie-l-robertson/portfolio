@@ -3,6 +3,9 @@ require("dotenv").config({
 })
 
 module.exports = {
+  flags: { 
+    PRESERVE_WEBPACK_CACHE: true 
+  },
   siteMetadata: {
     title: `Jamie Robertson`,
     description: `Frontend developer based in Edinburgh, Scotland. Currently focusing on React based projects.`,

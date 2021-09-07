@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import breakpoint from "styled-components-breakpoint";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { rem } from "polished";
 
-const Content = styled(motion.div)`
+const Content = styled(m.div)`
   display: block;
   max-width: 860px;
 

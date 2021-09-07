@@ -1,5 +1,5 @@
 import * as React from "react";
-import { motion } from 'framer-motion';
+import { m } from "framer-motion"
 import { useInView } from "react-intersection-observer";
 import { urlContext } from "@stores/url.context";
 import { prefersReducedMotionContext } from "@stores/reduceMotion.context";
@@ -31,13 +31,13 @@ const CardList: React.FC<CardListProps> = ({
     }
   }, [inView]);
 
-  return (
+  return ( 
     <>
       {
         cards.length > 0 && (
           <Container id={id}>
             <Inner>
-              <motion.div ref={ref} initial="initial" animate={inView ? `animate` : `initial`} custom={reducedMotion} variants={inUp}>
+              <m.div ref={ref} initial="initial" animate={inView ? `animate` : `initial`} custom={reducedMotion} variants={inUp}>
                 {heading && (
                   <Heading level="2" showDot={true}>
                     {heading}
@@ -46,14 +46,14 @@ const CardList: React.FC<CardListProps> = ({
                 {cards && (
                   <CardsWrapper variants={chained}>
                     {cards.map((item, i) => (
-                      <motion.div key={`card-${i}`} variants={inUp}>
+                      <m.div key={`card-${i}`} variants={inUp}>
                         <Card {...item} />
-                      </motion.div>
+                      </m.div>
                     ))}
                   </CardsWrapper>
 
                 )}
-              </motion.div>
+              </m.div>
             </Inner>
           </Container>
         )

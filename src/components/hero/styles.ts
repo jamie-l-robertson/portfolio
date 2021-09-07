@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import breakpoint from "styled-components-breakpoint";
 import { rem } from "polished";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Container } from "@theme";
 import Heading from "@components/heading";
 
-const HeroWrapper = styled(motion(Container))`
+const HeroWrapper = styled(m(Container))`
   position: relative;
   display: flex;
   min-height: 100vh;
@@ -54,7 +54,7 @@ const Dot = styled.span`
   color: ${props => props.theme.config.color.quaternary};
 `;
 
-const Intro = styled(motion.div)`
+const Intro = styled(m.div)`
   max-width: 760px;
 
   p {

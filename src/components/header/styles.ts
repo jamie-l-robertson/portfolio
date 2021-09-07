@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import breakpoint from "styled-components-breakpoint";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Link } from "gatsby";
 import { rem } from "polished";
 
@@ -23,7 +23,7 @@ const HeaderWrapper = styled.header`
   `};
 `;
 
-const LogoWrapper = styled(motion(Link))`
+const LogoWrapper = styled(m(Link))`
   display: inline-block;
   width: 60px;
   height: 35px;
@@ -36,7 +36,7 @@ const LogoWrapper = styled(motion(Link))`
   }
 `;
 
-const NavList = styled(motion.ul)`
+const NavList = styled(m.ul)`
   display: none;
 
   ${breakpoint('tablet')`
@@ -49,7 +49,7 @@ const NavList = styled(motion.ul)`
   `};
 `;
 
-const NavItem = styled(motion.li)`
+const NavItem = styled(m.li)`
   display: inline-block;
   vertical-align: middle;
   font-weight: 700;

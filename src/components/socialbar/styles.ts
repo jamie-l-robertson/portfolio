@@ -1,13 +1,13 @@
 import styled from "styled-components"
 import { rem } from "polished";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
-const Items = styled(motion.ul)`
+const Items = styled(m.ul)`
   margin: ${rem('40px')} 0;
   padding: 0;
 `;
 
-const Item = styled(motion.li)`
+const Item = styled(m.li)`
   display: inline-block;
 
   + li {

@@ -89,6 +89,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-webpack-bundle-analyser-v2`

@@ -27,7 +27,7 @@
     "gatsby-plugin-styled-components": "^4.13.0",
     "gatsby-plugin-typescript": "^3.13.0",
     "gatsby-react-router-scroll": "^4.13.0",
-    "gatsby-plugin-netlify-cache": "*",
+    "netlify-plugin-gatsby": "*",
     "gatsby-source-datocms": "^2.6.18",
     "gatsby-source-filesystem": "^3.13.0",
     "gatsby-transformer-remark": "^4.10.0",

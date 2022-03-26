@@ -17,7 +17,7 @@ const BlogCard = ({ title, intro, image, postDate }:BlogCardProps) => {
       {image && <img src={image.src} alt={image.alt} />}
       {title && <h3>{title}</h3>}
       {intro && intro}
-      {postDate && <time>{postDate}</time>}
+      {postDate && <time datetime={postDate}>{postDate}</time>}
       {link && <a href={link}>Read post</a>}
     </article>
   )

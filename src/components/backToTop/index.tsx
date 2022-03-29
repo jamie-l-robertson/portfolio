@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import Icon from "@/components/icon";
+import Icon from "@components/icon";
 import * as S from './styles';
 
 interface BackToTopProps {

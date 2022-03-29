@@ -90,7 +90,7 @@ const IndexPage = ({ data }) => {
         {hero && <Hero id="home" data={hero} />}
         {about && <ContentPanel id="about" content={about} />}
         {allDatoCmsProject && <CardList id="projects" heading="Personal projects" cards={allDatoCmsProject.edges} />}
-        <ContactPanel id="contact" title="Get in touch" />
+        <ContactPanel id="contact" title="Get in touch" buttonText="Send a message" />
         <BackToTop offset={200} />
       </LazyMotion>
     </Layout>

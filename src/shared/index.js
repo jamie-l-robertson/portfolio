@@ -1,16 +1,20 @@
 const config = {
   navLinks: [
     {
-      url: "#home",
+      url: "/#home",
       text: "Home",
     },
     {
-      url: "#about",
+      url: "/#about",
       text: "About",
     },
     {
-      url: "#projects",
+      url: "/#projects",
       text: "Projects",
+    },
+    {
+      url: "/blog",
+      text: "Blog",
     },
   ],
   socialLinks: [

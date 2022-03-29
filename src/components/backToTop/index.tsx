@@ -4,8 +4,9 @@ import Icon from "@components/icon";
 import { BackToTopButton } from './styles';
 
 interface BackToTopProps {
-  iconName: string
-  scrollType: string
+  iconName?: string;
+  scrollType?: string;
+  offset: number;
 };
 
 const BackToTop: React.FC<BackToTopProps> = ({

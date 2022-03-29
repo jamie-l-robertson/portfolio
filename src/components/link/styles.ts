@@ -6,6 +6,7 @@ const StyledLink = styled.a`
   ${props => props.blockLink && `display: inline-block;`};
   margin: 0 0 ${rem('20px')};
   padding: ${rem('15px')} ${rem('20px')};
+  ${props => props.size = 'small' && `padding: ${rem('5px')} ${rem('5px')}`}
   font-family: ${props => props.theme.config.font.label};
   font-weight: 700;
   font-size: ${rem('18px')};

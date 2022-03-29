@@ -9,11 +9,22 @@ const CardWrapper = styled.article`
   padding: ${rem('40px')} ${rem('25px')};
   background-color: rgba(255, 255, 255, 0.08);
   transition: all 0.2s ease-in-out;
+  overflow: hidden;
 
   ${breakpoint('tablet')`
     height: 100%;
     margin-bottom: 0;
   `};
+
+  .gatsby-image-wrapper {
+    float: left;
+    width: 175px;
+    margin-right: ${rem('25px')};
+
+    ~ h3 {
+      padding: 0;
+    }
+  }
 `;
 
 const CardMeta = styled.header`

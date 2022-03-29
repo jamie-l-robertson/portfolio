@@ -13,13 +13,15 @@ interface CardListProps {
   heading: string
   cards?: []
   id?: string
+  showLinks: boolean
 };
 
-const CardList: React.FC<CardListProps> = ({
+const CardList = ({
   heading,
   cards = [],
-  id = undefined
-}) => {
+  id = undefined,
+  showLinks = false
+}:CardListProps) => {
   const { ref, inView } = useInView({ rootMargin: '-100px 0px' });
   const { setCurrentUrl } = React.useContext(urlContext);
   const { reducedMotion } = React.useContext(prefersReducedMotionContext);
@@ -47,7 +49,7 @@ const CardList: React.FC<CardListProps> = ({
                   <CardsWrapper variants={chained}>
                     {cards.map((item, i) => (
                       <m.div key={`card-${i}`} variants={inUp}>
-                        <Card {...item} />
+                        <Card {...item} showLink={showLinks} />
                       </m.div>
                     ))}
                   </CardsWrapper>

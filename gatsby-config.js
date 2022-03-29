@@ -3,9 +3,6 @@ require("dotenv").config({
 })
 
 module.exports = {
-  flags: { 
-    FAST_DEV: true 
-  },
   siteMetadata: {
     title: `Jamie Robertson`,
     description: `Frontend developer based in Edinburgh, Scotland. Currently focusing on React based projects.`,
@@ -29,8 +26,9 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
@@ -92,6 +90,6 @@ module.exports = {
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-webpack-bundle-analyser-v2`
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
   ]
 }

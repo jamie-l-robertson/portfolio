@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Particles from "react-particles-js";
+import Particles from "react-tsparticles";
 
 const StyledParticles = styled(Particles)`
   position: absolute;

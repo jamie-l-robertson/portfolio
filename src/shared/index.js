@@ -12,6 +12,13 @@ const config = {
       url: "#projects",
       text: "Projects",
     },
+    {
+      url: "/resume.pdf",
+      text: "Resume",
+      download: true,
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
   ],
   socialLinks: [
     {
@@ -42,8 +49,9 @@ const config = {
   ],
   contact: {
     email: "jrobertson_uk@msn.com",
-    intro: "<p>Although I'm not currently looking for any new freelance opportunities, my email is always open. If you would like to discuss a potential project or just say hello!</p>"
-  }
-};
+    intro:
+      "<p>Although I'm not currently looking for any new freelance opportunities, my email is always open. If you would like to discuss a potential project or just say hello!</p>",
+  },
+}
 
-export default config;
+export default config

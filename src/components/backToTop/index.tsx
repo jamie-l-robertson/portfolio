@@ -1,17 +1,18 @@
 import * as React from 'react';
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import Icon from "@components/icon";
-import { BackToTopButton } from './styles';
+import * as S from './styles';
 
 interface BackToTopProps {
   iconName: string
-  scrollType: string
+  scrollType: ScrollBehavior | undefined
+  show: boolean
 };
 
 const BackToTop: React.FC<BackToTopProps> = ({
   scrollType = "smooth",
   iconName = "ArrowUpCircle",
-  ...props
+  ...rest
 }) => {
 
   const [showOnScroll, setShowOnScroll] = React.useState(false);
@@ -31,9 +32,9 @@ const BackToTop: React.FC<BackToTopProps> = ({
   }, [showOnScroll]);
 
   return (
-    <BackToTopButton onClick={handleClick} type="button" show={showOnScroll} aria-label="Back to top" {...props}>
+    <S.BackToTopButton onClick={handleClick} type="button" show={showOnScroll} aria-label="Back to top" {...rest}>
       <Icon name={iconName} title="Back to top" size={35} />
-    </BackToTopButton>
+    </S.BackToTopButton>
   );
 
 };

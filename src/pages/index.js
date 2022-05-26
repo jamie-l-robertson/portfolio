@@ -1,4 +1,5 @@
 import * as React from "react";
+import { LazyMotion, domAnimation } from "framer-motion";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -85,11 +86,13 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Hello" />
       <BackgroundParticles />
-      {hero && <Hero id="home" data={hero} />}
-      {about && <ContentPanel id="about" content={about} />}
-      {allDatoCmsProject && <CardList id="projects" heading="Personal projects" cards={allDatoCmsProject.edges} />}
-      <ContactPanel id="contact" title="Get in touch" />
-      <BackToTop offset={200} />
+      <LazyMotion features={domAnimation} strict>
+        {hero && <Hero id="home" data={hero} />}
+        {about && <ContentPanel id="about" content={about} />}
+        {allDatoCmsProject && <CardList id="projects" heading="Personal projects" cards={allDatoCmsProject.edges} />}
+        <ContactPanel id="contact" title="Get in touch" />
+        <BackToTop offset={200} />
+      </LazyMotion>
     </Layout>
   )
 };

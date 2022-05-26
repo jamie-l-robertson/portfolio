@@ -1,5 +1,5 @@
 import * as React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { urlContext } from "@stores/url.context";
 import { prefersReducedMotionContext } from "@stores/reduceMotion.context";
@@ -30,12 +30,12 @@ const ContentPanel: React.FC<ContentPanelProps> = ({ content, id }) => {
   return (
     <Container id={id} isInView={inView ? id : null} noTop>
       <Inner>
-        <motion.div ref={ref} initial="initial" animate={inView ? `animate` : `initial`} variants={inUp} custom={reducedMotion}>
-          <motion.div variants={chained}>
+        <m.div ref={ref} initial="initial" animate={inView ? `animate` : `initial`} variants={inUp} custom={reducedMotion}>
+          <m.div variants={chained}>
             {title && <Heading level="2" showDot>{title}</Heading>}
             <Content dangerouslySetInnerHTML={{ __html: contentNode.childMarkdownRemark.html }} variants={inUp} />
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </Inner>
     </Container>
   );

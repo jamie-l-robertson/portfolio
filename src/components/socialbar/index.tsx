@@ -1,5 +1,5 @@
 import * as React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Icon from "@components/icon";
 import config from "@shared";
 import { inUp, chained } from "@animations";
@@ -15,7 +15,7 @@ const SocialBar: React.FC<SocialBarProps> = ({ vertical = false }) => {
   const { reducedMotion } = React.useContext(prefersReducedMotionContext);
 
   return (
-    <motion.div initial="initial" animate="animate">
+    <m.div initial="initial" animate="animate">
       <Items variants={chained}>
         {channels.map((animation, i) => (
           <Item key={channels[i].icon} custom={reducedMotion} variants={inUp}>
@@ -25,7 +25,7 @@ const SocialBar: React.FC<SocialBarProps> = ({ vertical = false }) => {
           </Item>
         ))}
       </Items>
-    </motion.div>
+    </m.div>
   )
 };
 

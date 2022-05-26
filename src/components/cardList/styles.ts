@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import breakpoint from "styled-components-breakpoint";
-import { motion } from "framer-motion";
-import { rem } from "polished";
+import { m } from "framer-motion";
 
-const CardsWrapper = styled(motion.div)`
+const CardsWrapper = styled(m.div)`
   display: block;
   position: relative;
 

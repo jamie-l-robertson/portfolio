@@ -1,5 +1,5 @@
 import * as React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import config from "@shared";
 import { inUp, delayedFade } from "@animations";
 import StyledHeading from "./styles";
@@ -23,7 +23,7 @@ const Heading: React.FC<HeadingProps> = ({
   return (
     <StyledHeading as={`h${level}`} initial="initial" animate="animate" hasBorder={border} variants={inUp} {...rest}>
       {children}
-      {showDot && <motion.span aria-hidden="true" initial="initial" animate="animate" variants={delayedFade}>.</motion.span>}
+      {showDot && <m.span aria-hidden="true" initial="initial" animate="animate" variants={delayedFade}>.</m.span>}
     </StyledHeading>
   )
 };

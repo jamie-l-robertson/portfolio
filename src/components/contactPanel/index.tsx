@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Container, Inner } from "@theme";
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useInView } from "react-intersection-observer";
 import { prefersReducedMotionContext } from "@stores/reduceMotion.context";
 import Heading from "@components/heading";
@@ -26,8 +26,8 @@ const ContactPanel: React.FC<ContactPanelProps> = ({
   return (
     <Container id={id} style={{ paddingTop: 0 }}>
       <Inner>
-        <motion.div ref={ref} initial="initial" animate={inView ? `animate` : `initial`} custom={reducedMotion} variants={inUp}>
-          <motion.div variants={chained}>
+        <m.div ref={ref} initial="initial" animate={inView ? `animate` : `initial`} custom={reducedMotion} variants={inUp}>
+          <m.div variants={chained}>
             <Heading level="2" showDot>{title}</Heading>
             <ContentContainer variants={inUp}>
               <Content dangerouslySetInnerHTML={{ __html: config.contact.intro }} />
@@ -35,8 +35,8 @@ const ContactPanel: React.FC<ContactPanelProps> = ({
                 <CustomLink href={`mailto:${config.contact.email}?subject=Website%20Enquiry`} blockLink external>{buttonText}</CustomLink>
               </ContentMeta>
             </ContentContainer>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </Inner>
     </Container>
   )

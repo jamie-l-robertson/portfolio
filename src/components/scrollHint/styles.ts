@@ -1,7 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import breakpoint from "styled-components-breakpoint";
-import { motion } from "framer-motion";
-import { rem } from "polished";
+import { m } from "framer-motion";
 
 const fadeDown = keyframes`
   0% {
@@ -35,7 +34,7 @@ const ScrollContainer = styled.div`
 
 `;
 
-const ScrollIcon = styled(motion.span)`
+const ScrollIcon = styled(m.span)`
 display: block;
 position: relative;
 width: 22px;

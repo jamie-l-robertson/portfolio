@@ -8,7 +8,7 @@ import ScrollHint from "@components/scrollHint";
 import { Inner } from "@theme";
 import { chained, inUp, inDown } from "@animations";
 import { HeroWrapper, HeroHeading, Prefix, Intro, Brand, Dot } from "./styles"
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 interface HeroProps {
   showBrand?: boolean
@@ -52,14 +52,14 @@ const Hero: React.FC<HeroProps> = ({
     <HeroWrapper ref={ref} id={id} initial="initial" animate={inView ? `animate` : `initial`} custom={reducedMotion} variants={inUp}>
       <Inner>
         {showBrand && <Brand />}
-        <motion.div variants={chained}>
+        <m.div variants={chained}>
           {title && (
-            <motion.div custom={reducedMotion} variants={inUp}>
+            <m.div custom={reducedMotion} variants={inUp}>
               <HeroHeading level="1" showDot={true}>
                 <Prefix>{prefix}</Prefix>
                 {title}
               </HeroHeading>
-            </motion.div>
+            </m.div>
           )}
           {copyNode && (
             <Intro
@@ -71,7 +71,7 @@ const Hero: React.FC<HeroProps> = ({
             />
           )}
           {link && <Link to={link.url}>{link.label}</Link>}
-        </motion.div>
+        </m.div>
         <SocialBar />
         <ScrollHint />
       </Inner>

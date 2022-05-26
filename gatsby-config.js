@@ -11,12 +11,12 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://www.jamie-robertson.uk',
-        sitemap: 'https://www.jamie-robertson.uk/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        host: "https://www.jamie-robertson.uk",
+        sitemap: "https://www.jamie-robertson.uk/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
     `gatsby-plugin-typescript`,
     {
@@ -55,35 +55,30 @@ module.exports = {
       options: {
         apiToken: process.env.DATO_CMS_TOKEN,
         previewMode: false,
-        disableLiveReload: false
+        disableLiveReload: false,
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Roboto\:400`,
-          `Solway\:400,700`,
-        ],
+        fonts: [`Roboto\:400`, `Solway\:400,700`],
         display: "swap",
       },
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        commonmark: true,
         footnotes: true,
-        pedantic: true,
         gfm: true,
         plugins: [],
       },
     },
     {
-      resolve: 'gatsby-plugin-preconnect',
+      resolve: "gatsby-plugin-preconnect",
       options: {
         domains: [
-          'https://fonts.googleapis.com/',
-          'https://fonts.gstatic.com/'
+          "https://fonts.googleapis.com/",
+          "https://fonts.gstatic.com/",
         ],
       },
     },
@@ -91,5 +86,5 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-webpack-bundle-analyser-v2`,
-  ]
+  ],
 }

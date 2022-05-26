@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages"
+command = "gatsby build --log-pages"
 
 [build.environment]
 YARN_VERSION = "1.17.0"

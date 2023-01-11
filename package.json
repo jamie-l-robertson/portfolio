@@ -31,7 +31,7 @@
     "gatsby-react-router-scroll": "^4.13.0",
     "gatsby-source-datocms": "^3.0.17",
     "gatsby-source-filesystem": "^4.10.1",
-    "gatsby-transformer-remark": "^5.10.2",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.10.0",
     "install": "^0.13.0",
     "intersection-observer": "^0.12.0",
